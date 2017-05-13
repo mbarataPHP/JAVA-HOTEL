@@ -1,5 +1,6 @@
 package Connection;
 
+import Enum.Environment;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,6 +14,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import Dependance.Dependance;
+import Log.Log;
 import Metier.Scan;
 import Model.Test;
 public class Connection {
@@ -34,16 +36,16 @@ public class Connection {
 		}
 	}
 	
+	/**
+	 * Cette méthode permet de récupérer tout les models automatiquement
+	 */
 	private void mesModel(){
 		
 		ArrayList<Class<?>> models = Scan.getClassesForPackage("Model");
-		PrintWriter writer = null;
-		try {
-			writer = new PrintWriter("the-file-name.txt", "UTF-8");
-		} catch (FileNotFoundException | UnsupportedEncodingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		
+		Log log = (Log) this.fb.get("log");
+		log.setLog("logModel", "les type de models: ", Environment.DEV);
+		log.setLog("logModel", "", Environment.DEV);
 		for(java.lang.Class model : models) {
 		
 			
@@ -53,7 +55,7 @@ public class Connection {
 				unModel.initModel(this.fb);
 				this.models.put(model.getName(), unModel);
 				
-				 writer.println(model.getName());
+				log.setLog("logModel", model.getName(), Environment.DEV);
 				  
 				
 			} catch (InstantiationException |  IllegalAccessException e) {
@@ -69,7 +71,7 @@ public class Connection {
 			}
 		}
 	
-		  writer.close();
+		log.getLog("logModel").close();
 	}
 	
 	

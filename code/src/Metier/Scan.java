@@ -10,6 +10,48 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 public class Scan {
+	
+	public static String getDirectory(){
+		return System.getProperty("user.dir")+"\\src\\";
+	}
+	
+	/**
+	 * 
+	 * @param file
+	 * @return ArrayList<File>
+	 */
+	public static ArrayList<File> getFilesString(String file){
+	
+		
+
+		return Scan.getFiles(new File(Scan.getDirectory()+file));
+		
+		
+	}
+	
+	/**
+	 * 
+	 * @param folder
+	 * @return ArrayList<File>
+	 */
+	public static ArrayList<File> getFiles(File folder){
+		ArrayList<File> files = new ArrayList<File>();
+		for (File fileEntry : folder.listFiles()) {
+	        if (fileEntry.isDirectory()) {
+	        	ArrayList<File> filesDirectory = getFiles(fileEntry);
+	        	for(File file : filesDirectory){
+	        		files.add(file);
+	        	}
+	        } else {
+	        	
+	        	files.add(fileEntry);
+	        }
+	    }
+	
+		return files;
+	}
+	
+	
 	/**
 	 * Cette méthode permet de lister toute les Classes d'un package
 	 * @param pkg
