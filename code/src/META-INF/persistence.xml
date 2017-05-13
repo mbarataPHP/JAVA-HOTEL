@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="em.test" transaction-type="RESOURCE_LOCAL">
+		<!-- provider -->
+		<provider>oracle.toplink.essentials.PersistenceProvider</provider>
+		<!-- classes persistantes -->
+		<class>Entity.Test</class>
+		<!-- propriétés de l'unité de persistance -->
+		<properties>
+			<!-- connexion JDBC -->
+			<property name="toplink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			
+			<property name="toplink.jdbc.url" value="jdbc:mysql://localhost:3306/hotel?useSSL=false" />
+			<property name="toplink.jdbc.user" value="root" />
+			<property name="toplink.jdbc.password" value="" />
+			<property name="toplink.jdbc.read-connections.max" value="3" />
+			<property name="toplink.jdbc.read-connections.min" value="1" />
+			<property name="toplink.jdbc.write-connections.max" value="5" />
+			<property name="toplink.jdbc.write-connections.min" value="2" />
+			<!-- SGBD -->
+			<property name="toplink.target-database" value="MySQL4" />
+			<!-- serveur d'application -->
+			<property name="toplink.target-server" value="None" />
+			<!-- génération schéma -->
+		
+			<property name="toplink.ddl-generation" value="create-tables"/>
+			<!-- 
+			<property name="toplink.ddl-generation.output-mode" value="sql-script"/>
+			<property name="toplink.create-ddl-jdbc-file-name" value="createDDL.sql"/>
+			<property name="toplink.drop-ddl-jdbc-file-name" value="dropDDL.sql"/>
+			<property name="toplink.application-location" value="D:\ddl\"/>
+			-->
+			<property name="toplink.query-results-cache" value="false"/>
+			<property name="toplink.cache.use_query_cache" value="false"/>
+			<property name="toplink.flush-clear.cache" value="Drop"/>
+			
+			<property name="toplink.logging.level" value="OFF" />
+		</properties>
+		</persistence-unit>
+</persistence>
