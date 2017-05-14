@@ -5,6 +5,7 @@ import Enum.Environment;
 import Log.Log;
 import Connection.Connection;
 import Route.Route;
+import Session.Session;
 import ViewObject.View;
 import javafx.stage.Stage;
 
@@ -16,6 +17,7 @@ public class Dependance {
 	private Route route;
 	private Log log;
 	private View view;
+	private Session session;
 	public Dependance(Stage stage, Environment env){
 		this.env = env;
 		this.log = new Log(this);
@@ -29,6 +31,7 @@ public class Dependance {
 			this.connection = new Connection(this);
 			this.route = new Route(this);
 			this.view = new View(this);
+			this.session = new Session(this);
 		}
 	}
 	
@@ -49,6 +52,8 @@ public class Dependance {
 			value = this.log;
 		}else if(id.equals("view")){
 			value = this.view;
+		}else if(id.equals("session")){
+			value = this.session;
 		}else{
 			try {
 				throw new ValidationException("<!---------------\nLa clé "+id+" n'existe pas\n---------------!>");

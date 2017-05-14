@@ -9,6 +9,15 @@
 
 <AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" maxWidth="Infinity"
         maxHeight="Infinity" xmlns:fx="http://javafx.com/fxml">
-	<Button onAction="#test" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Revenir au menu" />
+	<children >
+        <Label text="email:" GridPane.columnIndex="0" GridPane.rowIndex="1" layoutX="14.0" layoutY="20.0"/>
+	    <TextField fx:id="email" layoutX="100.0" layoutY="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+	    
+	     <Label text="mot de passe:" GridPane.columnIndex="0" GridPane.rowIndex="1" layoutX="14.0" layoutY="50.0"/>
+	    <TextField fx:id="password" layoutX="100.0" layoutY="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+	    
+		<Button onAction="#test" layoutX="100.0" layoutY="80.0" mnemonicParsing="false" text="Envoyer" />
+	</children>
+
 </AnchorPane>
 

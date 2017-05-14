@@ -49,7 +49,11 @@ public abstract class ModelParent {
 		return entity;
 	}
 	
-	
+	/**
+	 * Cette méthode retourne l'entité à partir de sa clé primaire
+	 * @param id
+	 * @return
+	 */
 	public Object find(int id){
 		Object ob = this.getObject();
 
@@ -58,12 +62,28 @@ public abstract class ModelParent {
 
 	}
 	
+	/**
+	 * Cette méthode retourne toute la liste complet de l'entité
+	 * @return
+	 */
 	public Collection<Object> findAll(){
 		Object ob = this.getObject();
 		Query query = em.createQuery("SELECT o FROM "+ob.getClass().getSimpleName()+" o");
-
-		  
+		
+	
+	
 		return (Collection<Object>) query.getResultList();
+	}
+	
+	
+	public Object singleOrNullResult(Query query){
+		Object object = null;
+		Collection<Object> objects = (Collection<Object>) query.getResultList();
+		if(objects.size()>0){
+			object = objects.iterator().next();
+		}
+		
+		return object;
 	}
 	
 }

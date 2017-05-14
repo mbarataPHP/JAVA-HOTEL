@@ -25,6 +25,7 @@ public class Connection {
 		this.fb = fb;
 		if(em==null){
 			EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("em.test");
+			
 			em = entityManagerFactory.createEntityManager();
 			this.entities = new ArrayList<Object>();
 			this.models = new Hashtable<String, Object>();
