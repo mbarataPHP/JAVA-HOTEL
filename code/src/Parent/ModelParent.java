@@ -6,6 +6,10 @@ import javax.persistence.EntityManager;
 import Connection.Connection;
 import Dependance.Dependance;
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
+import java.util.Collection;
+
+import javax.persistence.Query;
 import Annotation.Model;
 import Annotation.View;
 
@@ -46,6 +50,20 @@ public abstract class ModelParent {
 	}
 	
 	
+	public Object find(int id){
+		Object ob = this.getObject();
+
+		
+        return em.find(ob.getClass(), Long.valueOf(id));
+
+	}
 	
+	public Collection<Object> findAll(){
+		Object ob = this.getObject();
+		Query query = em.createQuery("SELECT o FROM "+ob.getClass().getSimpleName()+" o");
+
+		  
+		return (Collection<Object>) query.getResultList();
+	}
 	
 }

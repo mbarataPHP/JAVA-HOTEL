@@ -1,5 +1,6 @@
 package Parent;
 
+import Connection.Connection;
 import Dependance.Dependance;
 import Route.Route;
 
@@ -52,6 +53,16 @@ public abstract class Ctrl {
 	private void redirecRoutePrivate(String redirect, String[][] paramater){
 		Route route = (Route) this.dependance.get("route");
 		route.get(redirect, paramater);
+	}
+	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
+	protected Object getModel(String model){
+		Connection con = (Connection) this.dependance.get("connection");
+		return con.getModel(model);
 	}
 	
 }

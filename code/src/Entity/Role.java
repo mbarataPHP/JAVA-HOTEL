@@ -25,4 +25,27 @@ public class Role {
 	
 	@OneToMany(mappedBy = "role")
 	private List<Utilisateur> Utilisateurs;
+
+	public String getTypeRole() {
+		return typeRole;
+	}
+
+	public void setTypeRole(String typeRole) {
+		this.typeRole = typeRole;
+	}
+
+	public List<Utilisateur> getUtilisateurs() {
+		return Utilisateurs;
+	}
+
+	public void setUtilisateurs(List<Utilisateur> utilisateurs) {
+		Utilisateurs = utilisateurs;
+	}
+
+	public Long getId() {
+		return id;
+	}
+	
+	
+	
 }
