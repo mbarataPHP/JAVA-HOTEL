@@ -3,12 +3,8 @@ package Parent;
 import Dependance.Dependance;
 import Route.Route;
 
-import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
-import Annotation.View;
-import Controller.HomeCtrl;
+
 /**
  * La mother des controllers
  * @author Mathieu

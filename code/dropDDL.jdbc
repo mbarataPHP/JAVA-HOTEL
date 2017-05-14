@@ -1,1 +1,3 @@
-DROP TABLE TEST
+ALTER TABLE utilisateur DROP FOREIGN KEY FK_utilisateur_id_role
+DROP TABLE role
+DROP TABLE utilisateur

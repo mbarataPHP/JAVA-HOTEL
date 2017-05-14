@@ -1,10 +1,6 @@
 package Connection;
 
 import Enum.Environment;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -16,7 +12,7 @@ import javax.persistence.Persistence;
 import Dependance.Dependance;
 import Log.Log;
 import Metier.Scan;
-import Model.Test;
+
 public class Connection {
 	private Dependance fb;
 	private static EntityManager em = null;
@@ -51,7 +47,7 @@ public class Connection {
 			
 			try {
 				
-				Parent.Model unModel = (Parent.Model) model.newInstance();
+				Parent.ModelParent unModel = (Parent.ModelParent) model.newInstance();
 				unModel.initModel(this.fb);
 				this.models.put(model.getName(), unModel);
 				
@@ -79,7 +75,9 @@ public class Connection {
 		return em;
 	}
 	
-	
+	public Object getModel(String key){
+		return this.models.get(key);
+	}
 	public void persist(Object entity){
 		this.entities.add(entity);
 	}

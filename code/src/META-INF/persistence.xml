@@ -4,7 +4,8 @@
 		<!-- provider -->
 		<provider>oracle.toplink.essentials.PersistenceProvider</provider>
 		<!-- classes persistantes -->
-		<class>Entity.Test</class>
+		<class>Entity.Role</class>
+		<class>Entity.Utilisateur</class>
 		<!-- propriétés de l'unité de persistance -->
 		<properties>
 			<!-- connexion JDBC -->
