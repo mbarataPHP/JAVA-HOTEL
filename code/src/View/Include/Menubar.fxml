@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" maxWidth="Infinity"
+        maxHeight="Infinity"  fx:controller="Include.Controller.MenubarCtrl"  xmlns:fx="http://javafx.com/fxml">
+      
+		 <Text fx:id="titreRole" layoutX="300" layoutY="50" stroke="BLACK" text="">
+            <font>
+                <Font name="Arial Black" size="24.0" />
+            </font>
+        </Text>
+		<Button onAction="#deconnexion" layoutX="100.0" layoutY="10.0" mnemonicParsing="false" text="déconnexion" />
+</AnchorPane>

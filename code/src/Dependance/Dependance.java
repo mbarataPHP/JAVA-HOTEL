@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 public class Dependance {
 	
+	public static Dependance dependanceKernel;
+	
 	private Environment env;
 	private Stage stage;
 	private Connection connection = null;
@@ -24,6 +26,7 @@ public class Dependance {
 		this.stage = stage;
 		
 		this.init();
+		Dependance.dependanceKernel = this;
 	}
 	
 	private void init(){
