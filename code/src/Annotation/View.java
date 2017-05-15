@@ -10,7 +10,7 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface View {
 	
-	String view();
+	String view(); //appelle la vue
 	
-	String[] css() default "";
+	String[] css() default ""; //appelle les fichiers css
 }

@@ -12,6 +12,11 @@
 	<children >
     		<fx:include source="../Include/Menubar.fxml"  /> <!-- Inclut la barre du haut -->
     		<fx:include source="../Include/Leftbar.fxml"  /> <!-- Inclut la barre du haut -->
+    		<fx:include source="../Include/Footerbar.fxml"  /> <!-- Inclut la barre du haut -->
 	</children>
-
+	<children >
+		<Button onAction="#redirection" userData="dashboard" layoutX="100.0" layoutY="80.0" mnemonicParsing="false" text="Dashboard" />
+		<Button onAction="#redirection" userData="role" layoutX="100.0" layoutY="110.0" mnemonicParsing="false" text="Gestion des rôles" />
+		<Button onAction="#redirection" userData="user" layoutX="100.0" layoutY="140.0" mnemonicParsing="false" text="Gestion des utilisateur" />
+	</children>
 </AnchorPane>
