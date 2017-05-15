@@ -16,9 +16,10 @@ public class View {
 		primaryStage = (Stage) this.dependance.get("stage");
 	}
 	
-	public void callView(String url, String title, Object controller){
+	public void callView(String url, String title, Object controller, String[] css){
 		try {
-			this.callViewScene(url, title, controller);
+		
+			this.callViewScene(url, title, controller, css);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -28,8 +29,8 @@ public class View {
 
 
 	
-	private void callViewScene(String url, String title,  Object controller) throws IOException{
-
+	private void callViewScene(String url, String title,  Object controller, String[] css) throws IOException{
+		
 		url = "../view/"+url;
 	
 		
@@ -47,9 +48,13 @@ public class View {
 	     
 	      // Création de la scène.
 	      Scene scene = new Scene(root);
-	     
+
 	      
-	      
+	      for(int i=0;i<css.length;i++){
+	    	  if(!css[i].equals("")){
+	    		  scene.getStylesheets().add(getClass().getResource("../css/"+css[i]).toExternalForm());
+	    	  }
+	      }
 	      //Scene scene2 = primaryStage.getScene();
 	    
 	      

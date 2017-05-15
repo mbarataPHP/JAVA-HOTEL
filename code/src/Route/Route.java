@@ -2,6 +2,7 @@ package Route;
 
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.AnnotatedElement;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import Dependance.Dependance;
@@ -62,13 +63,18 @@ public class Route {
 	
 	
 	private void callView(String cle, String[][] paramaters){
-		Object controller = ((Ctrl) routes.get(cle)).initDefault(this.fb);
-		
+		Ctrl controller = (Ctrl) ((Ctrl) routes.get(cle)).initDefault(this.fb);
+	
 		ViewObject.View view = (ViewObject.View) this.fb.get("view");
 		
 		((Ctrl) controller).paramaters(paramaters);
 		
-		view.callView(cle, cle, controller);
+		
+		
+		Annotation column = controller.getClass().getAnnotation(View.class);
+		View viewAnnotation = (View) column;
+		
+		view.callView(cle, cle, controller, viewAnnotation.css());
 		//.callView("home");
 	}
 }

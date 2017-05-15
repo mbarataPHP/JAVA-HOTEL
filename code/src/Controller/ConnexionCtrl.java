@@ -8,7 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-@View(view="Connexion.fxml")
+@View(view="Connexion.fxml", css={"connexion.css"})
 public class ConnexionCtrl extends Parent.Ctrl{
 	
 	@FXML
