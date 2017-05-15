@@ -23,7 +23,7 @@ public class MenubarCtrl extends Parent.IncludeCtrl {
 	}
 	
 	 @FXML
-	 void initialize(){
+	 public void initialize(){
 		 Session session = (Session) this.dependance.get("session");
 		 this.titreRole.setText(session.getUtilisateur().getRole().getTypeRole());
 	 }

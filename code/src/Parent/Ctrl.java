@@ -64,5 +64,10 @@ public abstract class Ctrl {
 		Connection con = (Connection) this.dependance.get("connection");
 		return con.getModel(model);
 	}
+
+	public void initialize() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

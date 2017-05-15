@@ -1,10 +1,15 @@
 package Model;
 
+import static java.lang.Math.toIntExact;
+
 import java.io.UnsupportedEncodingException;
+import java.util.Collection;
 
 import javax.persistence.Query;
 import Annotation.Model;
 import Entity.Utilisateur;
+import Metier.Crypt;
+import Session.Session;
 
 @Model(entity="Utilsateur")
 public class Connection extends Parent.ModelParent{
@@ -16,7 +21,6 @@ public class Connection extends Parent.ModelParent{
 	 * @return Utilsateur|null
 	 */
 	public Utilisateur verifyLogin(String email, String password){
-		
 		try {
 			password = Metier.Crypt.get_SHA_512_SecurePassword(password, email); //on crypte les mot passe
 		} catch (UnsupportedEncodingException e) {
@@ -31,4 +35,5 @@ public class Connection extends Parent.ModelParent{
 		
 		return (Utilisateur) this.singleOrNullResult(query);
 	}
+
 }

@@ -22,7 +22,9 @@ public abstract class ModelParent {
 		this.em = Connection.getEm();
 	}
 	
-	
+	public Dependance getDependance(){
+		return this.dependance;
+	}
 	public EntityManager getEntityManager(){
 		return this.em;
 	}
