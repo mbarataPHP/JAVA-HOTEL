@@ -1,13 +1,10 @@
 package Entity;
 
-import java.io.UnsupportedEncodingException;
 
+import java.io.UnsupportedEncodingException;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -18,6 +15,7 @@ import Parent.Personne;
 @Table(name="utilisateur")
 public class Utilisateur extends Personne{
 	
+
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "id_role")
 	protected Role role;

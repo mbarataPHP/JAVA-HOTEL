@@ -14,5 +14,7 @@
     		<fx:include source="../Include/Leftbar.fxml"  /> <!-- Inclut la barre du haut -->
     		<fx:include source="../Include/Footerbar.fxml"  /> <!-- Inclut la barre du haut -->
 	</children>
-
+	<TableView fx:id="TVUser" layoutX="23.0" layoutY="21.0" prefHeight="334.0" prefWidth="278.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="21.0">
+	
+	</TableView>
 </AnchorPane>

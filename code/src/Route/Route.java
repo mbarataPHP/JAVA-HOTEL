@@ -28,11 +28,12 @@ public class Route {
 		log.setLog("logCtrl", "les type de controller: ", Environment.DEV);
 		log.setLog("logCtrl", "", Environment.DEV);
 		for(java.lang.Class<?> ctrl : ctrls) {
+			
 			try {
 				Parent.Ctrl unCtrl = (Parent.Ctrl) ctrl.newInstance();
 		
 			
-			
+				
 				Annotation column = ctrl.getAnnotation(View.class);
 				View viewAnnotation = (View) column;
 			
@@ -41,7 +42,7 @@ public class Route {
 				log.setLog("logCtrl", viewAnnotation.view()+" == "+unCtrl.getClass(), Environment.DEV);
 			} catch (InstantiationException | IllegalAccessException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				
 			}
 		}
 		log.getLog("logCtrl").close();

@@ -1,5 +1,7 @@
 package Parent;
 
+import java.util.HashMap;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class Personne {
+public class Personne{
 	@Id
 	@Column(name="id")
 	@GeneratedValue( strategy = GenerationType.IDENTITY )
@@ -22,7 +24,7 @@ public class Personne {
 	@Column(unique=true, name="mail")
 	protected String mail;
 	
-
+	
 	
 	/*
 	 * GETTER SETTER
