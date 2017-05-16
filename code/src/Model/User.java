@@ -26,4 +26,19 @@ public class User extends Parent.ModelParent{
 		
 		 return col;
 	}
+	
+	
+	public boolean MailExist(String mail){
+		boolean isExist = false;
+		Query query = this.getEntityManager().createQuery("SELECT u FROM Utilisateur u WHERE u.mail IN (:user) ");
+		query.setParameter("user", mail);
+		
+		Utilisateur user = (Utilisateur) this.singleOrNullResult(query);
+		
+		if(user!=null){
+			isExist = true;
+		}
+		
+		return isExist;
+	}
 }

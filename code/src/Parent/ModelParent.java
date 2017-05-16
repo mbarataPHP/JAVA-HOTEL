@@ -7,6 +7,7 @@ import Connection.Connection;
 import Dependance.Dependance;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.persistence.Query;
@@ -16,6 +17,8 @@ import Annotation.View;
 public abstract class ModelParent {
 	private Dependance dependance;
 	private EntityManager em;
+	private ArrayList<Object> persists = new ArrayList<Object>();
+	private ArrayList<Object> removes = new ArrayList<Object>();
 	
 	public void initModel(Dependance dependance){
 		this.dependance = dependance;
@@ -29,6 +32,29 @@ public abstract class ModelParent {
 		return this.em;
 	}
 	
+	public void persist(Object persist){
+		persists.add(persist);
+	}
+	public void remove(Object remove){
+		removes.add(remove);
+	}
+	public void flush(){
+		em.getTransaction().begin();
+		
+		for(Object remove : removes){
+			em.remove(remove);
+		}
+		
+		for(Object persist : persists){
+			em.persist(persist);
+		}
+		
+		 
+		  
+		em.getTransaction().commit();
+		persists = new ArrayList<Object>();
+		removes = new ArrayList<Object>();
+	}
 	private Object getObject(){
 		Annotation column = this.getClass().getAnnotation(Model.class);
 		Model ModelAnnotation = (Model) column;

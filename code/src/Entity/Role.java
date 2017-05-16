@@ -47,5 +47,7 @@ public class Role {
 	}
 	
 	
-	
+	public String toString(){
+		return this.typeRole;
+	}
 }

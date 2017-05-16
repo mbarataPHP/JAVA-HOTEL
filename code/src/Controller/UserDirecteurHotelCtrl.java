@@ -6,6 +6,7 @@ import Annotation.View;
 import Connection.Connection;
 import Entity.Utilisateur;
 import Model.User;
+import Route.Route;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -23,14 +24,19 @@ public class UserDirecteurHotelCtrl extends Parent.Ctrl{
 	@FXML
     private TableView<Utilisateur> TVUser;
 	
+	public void creation(ActionEvent event){
+		Route route = (Route) this.dependance.get("route");
+		
+		route.get("Directeur/UserDirecteurCreate.fxml");
+	}
 
 	@Override
 	public void initialize() {
 		Connection connect = (Connection) this.dependance.get("connection");
 		User user = (User) connect.getModel("Model.User");
-		Collection<Utilisateur> listeUser = user.listUser();
+		Route route = (Route) this.dependance.get("route");
 		
-		ObservableList<Utilisateur> data  = FXCollections.observableArrayList(listeUser);
+		ObservableList<Utilisateur> data  = FXCollections.observableArrayList(user.listUser());
 		
 		TableColumn firstNameCol = new TableColumn( "prénom" );
         firstNameCol.setCellValueFactory( new PropertyValueFactory<>( "firstname" ) );
@@ -109,8 +115,9 @@ public class UserDirecteurHotelCtrl extends Parent.Ctrl{
                                     btn.setOnAction( ( ActionEvent event ) ->
                                             {
                                                 Utilisateur Utilisateur = getTableView().getItems().get( getIndex() );
-                                                
-                                                System.out.println("supp");
+                                                user.remove(Utilisateur);
+                                                user.flush();
+                                                route.get("Directeur/UserDirecteurHotel.fxml");
                                                 
                                     } );
                                     setGraphic( btn );
@@ -128,13 +135,7 @@ public class UserDirecteurHotelCtrl extends Parent.Ctrl{
         
         TVUser.setItems(data);
         TVUser.getColumns().addAll( firstNameCol, lastNameCol, actionModif, actionSupp);
-		/*lastname.setCellValueFactory(new PropertyValueFactory<Utilisateur, String>("lastname"));
-		firstname.setCellValueFactory(new PropertyValueFactory<Utilisateur, String>("firstname"));
-		id.setCellValueFactory(new PropertyValueFactory<Utilisateur, String>("id"));
-		
-		 
-		TVUser.getItems().setAll(listeUser);*/
-		//TVUser.getItems().addAll(listeUser);
+	
         
 	}
 	
