@@ -12,20 +12,18 @@ public class DirecteurHotelCtrl extends Parent.Ctrl{
 	public void redirection(ActionEvent event){
 		 Node node = (Node) event.getSource() ;
 		 String data = (String) node.getUserData();
-		
+		 Route route = (Route) this.dependance.get("route");
 		 switch(data){
 		 case "dashboard":
 			 
+			 
 			 break;
-		 
-		 
 			 
 		 case "role":
-			 
+			 route.get("Directeur/DirecteurRole.fxml");
 			 break;
 			 
 		 case "user":
-			 Route route = (Route) this.dependance.get("route");
 			 route.get("Directeur/UserDirecteurHotel.fxml");
 			 break;
 		 

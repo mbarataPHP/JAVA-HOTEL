@@ -27,7 +27,11 @@ public class User extends Parent.ModelParent{
 		 return col;
 	}
 	
-	
+	/**
+	 * Cette méthode vérifie si l'email existe bien
+	 * @param mail
+	 * @return
+	 */
 	public boolean MailExist(String mail){
 		boolean isExist = false;
 		Query query = this.getEntityManager().createQuery("SELECT u FROM Utilisateur u WHERE u.mail IN (:user) ");

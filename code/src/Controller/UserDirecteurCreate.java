@@ -50,7 +50,7 @@ public class UserDirecteurCreate extends Parent.Ctrl{
 				user.setFirstname(firstname.getText());
 				user.setLastname(lastname.getText());
 				user.setMail(mail.getText());
-				user.setPassword(password.getText());
+				user.setPasswordCrypt(password.getText());
 				user.setRole(rolesBoxs.getValue());
 				
 				connect.persist(user);

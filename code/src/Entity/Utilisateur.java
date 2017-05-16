@@ -51,6 +51,8 @@ public class Utilisateur extends Personne{
 		this.role = role;
 	}
 	
-	
+	public String getMailLastNameFirstName(){
+		return this.mail+"_"+this.lastname+"_"+this.firstname;
+	}
 	
 }
