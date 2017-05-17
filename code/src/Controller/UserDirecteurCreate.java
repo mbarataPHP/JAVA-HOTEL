@@ -6,6 +6,7 @@ import Annotation.View;
 import Connection.Connection;
 import Entity.Role;
 import Entity.Utilisateur;
+import Metier.Filter;
 import Model.User;
 import Route.Route;
 import javafx.event.ActionEvent;
@@ -44,7 +45,7 @@ public class UserDirecteurCreate extends Parent.Ctrl{
 				&& !password.getText().equals("")
 			){
 			
-			if(!userModel.MailExist(mail.getText())){
+			if(!userModel.MailExist(mail.getText()) && Filter.validate(mail.getText())){
 				Utilisateur user = new Utilisateur();
 				
 				user.setFirstname(firstname.getText());
