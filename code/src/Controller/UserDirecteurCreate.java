@@ -27,6 +27,9 @@ public class UserDirecteurCreate extends Parent.Ctrl{
 	private TextField mail;
 	
 	@FXML
+	private TextField login;
+	
+	@FXML
 	private TextField password;
 	
 	@FXML
@@ -43,13 +46,21 @@ public class UserDirecteurCreate extends Parent.Ctrl{
 				&& !lastname.getText().equals("") 
 				&& !mail.getText().equals("") 
 				&& !password.getText().equals("")
+				&& !login.getText().equals("")
 			){
 			
-			if(!userModel.MailExist(mail.getText()) && Filter.validate(mail.getText())){
+			if(
+					!userModel.MailExist(mail.getText()) 
+					&& 
+					Filter.validate(mail.getText())
+					&&
+					!userModel.LoginExist(login.getText()) 
+				){
 				Utilisateur user = new Utilisateur();
 				
 				user.setFirstname(firstname.getText());
 				user.setLastname(lastname.getText());
+				user.setLogin(login.getText());
 				user.setMail(mail.getText());
 				user.setPasswordCrypt(password.getText());
 				user.setRole(rolesBoxs.getValue());

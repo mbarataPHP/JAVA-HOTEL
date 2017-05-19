@@ -22,8 +22,10 @@
 	      <Label layoutX="347.0" layoutY="392.0" prefHeight="17.0" prefWidth="52.0" text="prénom:" />
 	      <TextField fx:id="mail" layoutX="446.0" layoutY="443.0" />
 	      <Label layoutX="354.0" layoutY="447.0" prefHeight="17.0" prefWidth="52.0" text="mail:" />
-	      <TextField fx:id="password" layoutX="446.0" layoutY="513.0" />
-	      <Label layoutX="348.0" layoutY="517.0" prefHeight="17.0" prefWidth="63.0" text="password:" />
-	      <Button layoutX="457.0" layoutY="578.0" mnemonicParsing="false" onAction="#ajout" text="créer" />
+	      <TextField fx:id="password" layoutX="446.0" layoutY="550.0" />
+	      <Label layoutX="349.0" layoutY="554.0" prefHeight="17.0" prefWidth="63.0" text="password:" />
+	      <Button layoutX="457.0" layoutY="606.0" mnemonicParsing="false" onAction="#ajout" text="créer" />
+      <Label layoutX="354.0" layoutY="501.0" prefHeight="17.0" prefWidth="52.0" text="login:" />
+      <TextField fx:id="login" layoutX="446.0" layoutY="497.0" />
 	</children>
 </AnchorPane>

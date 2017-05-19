@@ -45,4 +45,23 @@ public class User extends Parent.ModelParent{
 		
 		return isExist;
 	}
+	
+	/**
+	 * Cette méthode vérifie si le login existe bien
+	 * @param mail
+	 * @return
+	 */
+	public boolean LoginExist(String login){
+		boolean isExist = false;
+		Query query = this.getEntityManager().createQuery("SELECT u FROM Utilisateur u WHERE u.login IN (:user) ");
+		query.setParameter("user", login);
+		
+		Utilisateur user = (Utilisateur) this.singleOrNullResult(query);
+		
+		if(user!=null){
+			isExist = true;
+		}
+		
+		return isExist;
+	}
 }

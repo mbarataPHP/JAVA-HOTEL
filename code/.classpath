@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="D:/G4/HOTEL/JAVA-HOTEL/extension/mysql-connector-java-5.1.41-bin.jar"/>
 	<classpathentry kind="lib" path="D:/G4/HOTEL/JAVA-HOTEL/extension/toplink-essentials.jar"/>
 	<classpathentry kind="lib" path="D:/G4/HOTEL/JAVA-HOTEL/extension/toplink-essentials-agent.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

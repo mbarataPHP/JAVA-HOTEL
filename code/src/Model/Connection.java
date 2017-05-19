@@ -20,17 +20,17 @@ public class Connection extends Parent.ModelParent{
 	 * @param password
 	 * @return Utilsateur|null
 	 */
-	public Utilisateur verifyLogin(String email, String password){
+	public Utilisateur verifyLogin(String login, String password){
 		try {
-			password = Metier.Crypt.get_SHA_512_SecurePassword(password, email); //on crypte les mot passe
+			password = Metier.Crypt.get_SHA_512_SecurePassword(password, login); //on crypte les mot passe
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		
-		Query query = this.getEntityManager().createQuery("SELECT u FROM Utilisateur u WHERE u.mail=:email AND u.password=:password");
-		query.setParameter("email", email);
+		Query query = this.getEntityManager().createQuery("SELECT u FROM Utilisateur u WHERE u.login=:login AND u.password=:password");
+		query.setParameter("login", login);
 		query.setParameter("password", password);
 		
 		return (Utilisateur) this.singleOrNullResult(query);

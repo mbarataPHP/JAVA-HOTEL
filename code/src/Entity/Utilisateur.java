@@ -23,14 +23,16 @@ public class Utilisateur extends Personne{
 	@Column(name="password")
 	private String password;
 	
+	@Column(unique=true, name="login")
+	private String login;
 	
 	public String getPassword() {
 		return password;
 	}
 	public void setPasswordCrypt(String password){
 		String crypt = "hdof,аз=)vqfsxgs+щ;,";
-		if(this.mail!=null){
-			crypt = this.mail;
+		if(this.login!=null){
+			crypt = this.login;
 		}
 		
 		try {
@@ -53,6 +55,12 @@ public class Utilisateur extends Personne{
 	
 	public String getMailLastNameFirstName(){
 		return this.mail+"_"+this.lastname+"_"+this.firstname;
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
 	}
 	
 }
