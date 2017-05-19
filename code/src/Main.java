@@ -10,8 +10,7 @@ public class Main extends Application{
 		// TODO Auto-generated method stub
 		launch(args);
 	}
-	
-	
+
 	@Override
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub

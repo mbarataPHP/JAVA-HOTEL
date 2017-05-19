@@ -7,7 +7,7 @@ import javafx.event.ActionEvent;
 public class LeftBarCtrl extends Parent.IncludeCtrl{
 	
 	/**
-	 * Cette méthode permet de revenir à l'accueil
+	 * Cette mï¿½thode permet de revenir ï¿½ l'accueil
 	 * @param action
 	 */
 	public void accueil(ActionEvent action){
@@ -15,7 +15,7 @@ public class LeftBarCtrl extends Parent.IncludeCtrl{
 		Route route = (Route) this.dependance.get("route");
 		String role = session.getUtilisateur().getRole().getTypeRole();
 		switch(role){
-		case "Directeur de l’hôtel":
+		case "Directeur de lâ€™hÃ´tel":
 		
 			route.get("Directeur/DirecteurHotel.fxml");
 			break;
