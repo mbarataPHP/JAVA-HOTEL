@@ -30,7 +30,7 @@ public class Utilisateur extends Personne{
 		return password;
 	}
 	public void setPasswordCrypt(String password){
-		String crypt = "hdof,аз=)vqfsxgs+щ;,";
+		/*String crypt = "hdof,аз=)vqfsxgs+щ;,";
 		if(this.login!=null){
 			crypt = this.login;
 		}
@@ -40,7 +40,8 @@ public class Utilisateur extends Personne{
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
+		this.password = password;
 
 	}
 	public void setPassword(String password) {

@@ -21,12 +21,12 @@ public class Connection extends Parent.ModelParent{
 	 * @return Utilsateur|null
 	 */
 	public Utilisateur verifyLogin(String login, String password){
-		try {
+		/*try {
 			password = Metier.Crypt.get_SHA_512_SecurePassword(password, login); //on crypte les mot passe
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 		Query query = this.getEntityManager().createQuery("SELECT u FROM Utilisateur u WHERE u.login=:login AND u.password=:password");
