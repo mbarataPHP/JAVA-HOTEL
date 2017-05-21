@@ -137,7 +137,7 @@ public class UserDirecteurHotelCtrl extends Parent.Ctrl{
                                                 Optional<ButtonType> result = alert.showAndWait();
                                                 if (result.get() == buttonOK){
                                                 	 user.remove(Utilisateur);
-                                                     user.flush();
+                                                     
                                                      route.get("Directeur/UserDirecteurHotel.fxml");
                                                 }
                                                 

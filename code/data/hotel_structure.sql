@@ -1,0 +1,14 @@
+CREATE TABLE role (id BIGINT AUTO_INCREMENT NOT NULL, type_role VARCHAR(255) UNIQUE, PRIMARY KEY (id))
+
+CREATE TABLE utilisateur (
+	id BIGINT AUTO_INCREMENT NOT NULL, 
+	mail VARCHAR(255) UNIQUE, 
+	password VARCHAR(255), 
+	lastname VARCHAR(255), 
+	login VARCHAR(255) UNIQUE, 
+	firstname VARCHAR(255), 
+	id_role BIGINT, PRIMARY KEY (id)
+)
+
+
+ALTER TABLE utilisateur ADD CONSTRAINT FK_utilisateur_id_role FOREIGN KEY (id_role) REFERENCES role (id)

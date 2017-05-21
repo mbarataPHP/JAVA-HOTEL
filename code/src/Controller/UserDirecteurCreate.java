@@ -65,8 +65,7 @@ public class UserDirecteurCreate extends Parent.Ctrl{
 				user.setPasswordCrypt(password.getText());
 				user.setRole(rolesBoxs.getValue());
 				
-				connect.persist(user);
-				connect.flush();
+				userModel.insert(user);
 				
 				Route route = (Route) this.dependance.get("route");
 				route.get("Directeur/UserDirecteurHotel.fxml");

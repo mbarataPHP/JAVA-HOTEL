@@ -2,28 +2,20 @@ package Entity;
 
 
 import java.io.UnsupportedEncodingException;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import Metier.Crypt;
 import Parent.Personne;
 
-@Entity
-@Table(name="utilisateur")
+
 public class Utilisateur extends Personne{
 	
 
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name = "id_role")
+
 	protected Role role;
 	
-	@Column(name="password")
+
 	private String password;
 	
-	@Column(unique=true, name="login")
+
 	private String login;
 	
 	public String getPassword() {
@@ -63,5 +55,6 @@ public class Utilisateur extends Personne{
 	public void setLogin(String login) {
 		this.login = login;
 	}
+	
 	
 }

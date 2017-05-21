@@ -11,9 +11,9 @@
 			<!-- connexion JDBC -->
 			<property name="toplink.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			
-			<property name="toplink.jdbc.url" value="jdbc:mysql://localhost:3306/hotel?useSSL=false" />
+			<property name="toplink.jdbc.url" value="jdbc:mysql://localhost:3306/lorem" />
 			<property name="toplink.jdbc.user" value="root" />
-			<property name="toplink.jdbc.password" value="" />
+			<property name="toplink.jdbc.password" value="hotel" />
 			<property name="toplink.jdbc.read-connections.max" value="3" />
 			<property name="toplink.jdbc.read-connections.min" value="1" />
 			<property name="toplink.jdbc.write-connections.max" value="5" />

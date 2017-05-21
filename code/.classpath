@@ -4,8 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="lib" path="D:/G4/HOTEL/JAVA-HOTEL/extension/mysql-connector-java-5.1.41-bin.jar"/>
-	<classpathentry kind="lib" path="D:/G4/HOTEL/JAVA-HOTEL/extension/toplink-essentials.jar"/>
-	<classpathentry kind="lib" path="D:/G4/HOTEL/JAVA-HOTEL/extension/toplink-essentials-agent.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/Mathieu/Downloads/jsch-0.1.54.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

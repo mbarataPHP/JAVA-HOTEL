@@ -23,8 +23,7 @@ public class CreateRoleDirecteurHotelCtrl extends Parent.Ctrl{
 			Role role = new Role();
 			role.setTypeRole(text.getText());
 			
-			roleModel.persist(role);
-			roleModel.flush();
+			roleModel.insert(role);
 			
 			route.get("Directeur/DirecteurRole.fxml");
 		}

@@ -1,15 +1,13 @@
 package Model;
 
-import static java.lang.Math.toIntExact;
 
-import java.io.UnsupportedEncodingException;
-import java.util.Collection;
 
-import javax.persistence.Query;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import Annotation.Model;
 import Entity.Utilisateur;
-import Metier.Crypt;
-import Session.Session;
 
 @Model(entity="Utilsateur")
 public class Connection extends Parent.ModelParent{
@@ -21,19 +19,37 @@ public class Connection extends Parent.ModelParent{
 	 * @return Utilsateur|null
 	 */
 	public Utilisateur verifyLogin(String login, String password){
-		/*try {
-			password = Metier.Crypt.get_SHA_512_SecurePassword(password, login); //on crypte les mot passe
-		} catch (UnsupportedEncodingException e) {
+		Utilisateur user = null;
+		
+
+		
+		PreparedStatement ts;
+		try {
+			ts = this.getEntityManager().prepareStatement("SELECT * FROM utilisateur LEFT JOIN role ON utilisateur.id_role = role.id WHERE login=? AND password=?");
+			ts.setString(1, login);
+			ts.setString(2, password);
+			
+			ResultSet rs = ts.executeQuery();
+			 while (rs.next()) {
+				 user = new Utilisateur();
+				 
+				 user.setId(rs.getLong("utilisateur.id"));
+				 user.setLastname(rs.getString("lastname"));
+				 user.setFirstname(rs.getString("firstname"));
+				 user.setLogin(rs.getString("login"));
+				 user.setPassword(rs.getString("password"));
+				 
+				 Entity.Role role = new Entity.Role();
+				 role.setId(rs.getLong("role.id"));
+				 role.setTypeRole(rs.getString("type_role"));
+				 
+				 user.setRole(role);
+			 }
+		}catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
-		
-		
-		Query query = this.getEntityManager().createQuery("SELECT u FROM Utilisateur u WHERE u.login=:login AND u.password=:password");
-		query.setParameter("login", login);
-		query.setParameter("password", password);
-		
-		return (Utilisateur) this.singleOrNullResult(query);
+		}
+		return (Utilisateur) user;
 	}
 
 }

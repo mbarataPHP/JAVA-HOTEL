@@ -129,7 +129,6 @@ public class DirecteurRoleCtrl  extends Parent.Ctrl {
                                                 Optional<ButtonType> result = alert.showAndWait();
                                                 if (result.get() == buttonOK){
                                                 	roleModel.remove(role);
-                                                	roleModel.flush();
                                                 	route.get("Directeur/DirecteurRole.fxml");
                                                 }
                                                 

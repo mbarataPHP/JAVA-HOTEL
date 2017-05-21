@@ -29,11 +29,11 @@ public class ConnexionCtrl extends Parent.Ctrl{
 			Session session = (Session) this.dependance.get("session");
 			session.startSession(utilisateur);
 			
-			if(utilisateur.getRole().getTypeRole().equals("Directeur de lâ€™hÃ´tel")){
+			if(utilisateur.getRole().getTypeRole().equals("Directeur de l’hôtel")){
 				Route route = (Route) this.dependance.get("route");
 				route.get("Directeur/DirecteurHotel.fxml");
 			}
-			else if (utilisateur.getRole().getTypeRole().equals("Directeur dâ€™hÃ©bergement")){
+			else if (utilisateur.getRole().getTypeRole().equals("Directeur d’hébergement")){
 				Route route = (Route) this.dependance.get("route");
 				route.get("Directeur/DirecteurHebergement.fxml");
 			}

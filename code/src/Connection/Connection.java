@@ -1,13 +1,11 @@
 package Connection;
 
 import Enum.Environment;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 
 import Dependance.Dependance;
 import Log.Log;
@@ -15,19 +13,32 @@ import Metier.Scan;
 
 public class Connection {
 	private Dependance fb;
-	private static EntityManager em = null;
+	private static java.sql.Connection em = null;
 	
-	private ArrayList<Object> entities;
+
 	private Hashtable<String, Object> models;
 	
 	
 	public Connection(Dependance fb){
 		this.fb = fb;
 		if(em==null){
-			EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("em.test");
 			
-			em = entityManagerFactory.createEntityManager();
-			this.entities = new ArrayList<Object>();
+			if(this.fb.getEnvironment()==Environment.PROD){
+				try {
+					em = new MySQLSSHConnector().connection_ssh_db();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else{
+				try {
+					em = new MySQLSSHConnector().connection_db();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
 			this.models = new Hashtable<String, Object>();
 			this.mesModel();
 		}
@@ -72,30 +83,14 @@ public class Connection {
 	}
 	
 	
-	public static EntityManager getEm() {
+	public static java.sql.Connection getEm() {
 		return em;
 	}
 	
 	public Object getModel(String key){
 		return this.models.get(key);
 	}
-	public void persist(Object entity){
-		this.entities.add(entity);
-	}
 	
-	public void flush(){
-		EntityTransaction transac = em.getTransaction();
-		transac.begin();
-		
-		
-		for(Object entitie : this.entities){
-			em.persist(entitie);
-		}
-		
-	    transac.commit();
 	
-		this.entities = new ArrayList<Object>();
-	    //em.getEntityManagerFactory().getCache().evictAll();
-	    
-	}
+
 }
