@@ -1,6 +1,7 @@
 SET SQL_SAFE_UPDATES = 0;
 -- DATABASE hotel
 delete from utilisateur;
+delete from client;
 delete from role;
 delete from chambre;
 delete from etage;
@@ -22,6 +23,11 @@ INSERT INTO `utilisateur` (`id`, `lastname`, login, `mail`, `firstname`, `passwo
 (1, 'St-Pierre', 'jst-pierre', 'JeanSt-Pierre@jourrapide.com', 'Jean', '123456', 1),
 (2, 'St-paul', 'jst-paul', 'JeanSt-Pierre@paul.com', 'Jean', '123456', 3),
 (3, 'Konovalova', 'Anisa-Konovalova', 'Anisa@Konovalova.ru', 'Anisa', '123456', 4);
+
+INSERT INTO client(id, lastname, firstname, mail) VALUES
+(1, 'toto', 'dude', 'toto@dude.com'),
+(2, 'lolo', 'connard', 'lolo@connard.com'),
+(3, 'putain', 'dddd', 'putain@dddd.com');
 
 
 INSERT INTO etage(id, num_etage) VALUES

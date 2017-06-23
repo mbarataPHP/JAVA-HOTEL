@@ -12,7 +12,6 @@
 	</children>
 	<children>
 		<Button layoutX="834.0" layoutY="165.0" mnemonicParsing="false" onAction="#creation" prefHeight="31.0" prefWidth="83.0" text="création" />
-		
 		<TableView fx:id="TVUser" layoutX="240.0" layoutY="207.0" prefHeight="445.0" prefWidth="697.0">
 		
 		</TableView>

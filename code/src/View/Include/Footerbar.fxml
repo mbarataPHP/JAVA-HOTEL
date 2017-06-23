@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="FooterPane" layoutX="0" layoutY="700" prefHeight="100.0" prefWidth="1000.0" maxWidth="Infinity"
+<AnchorPane id="FooterPane" layoutX="0" layoutY="700"  maxWidth="Infinity"
         maxHeight="Infinity"   xmlns:fx="http://javafx.com/fxml">
       
 		

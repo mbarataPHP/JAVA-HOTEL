@@ -14,10 +14,16 @@ public class LeftBarCtrl extends Parent.IncludeCtrl{
 		Session session = (Session) this.dependance.get("session");
 		Route route = (Route) this.dependance.get("route");
 		String role = session.getUtilisateur().getRole().getTypeRole();
-		
+	
 		switch(role){
-		case "Directeur de l’hôtel":
-			route.get("Directeur/DirecteurHotel.fxml");
+			case "Directeur de l’hôtel":
+				route.get("Directeur/DirecteurHotel.fxml");
+			break;
+			case "Directeur d’hébergement":
+				route.get("Directeur/DirecteurHebergement.fxml");
+			break;
+			case "Chef de réception":
+				route.get("Directeur/ChefDeReception.fxml");
 			break;
 		}
 	}

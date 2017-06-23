@@ -6,8 +6,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import Enum.FactureType;
+import Metier.DateMetier;
+
 public class Facture {
 	private Long id;
+	
+	private FactureType factureType;
 	
 	private Date dateDebut;
 	
@@ -36,6 +41,17 @@ public class Facture {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Cette méthode va retourner le prix
+	 * @return float
+	 */
+	public float getPrix(){
+		Long jour = DateMetier.nbrJourIntervalle(this.dateDebut, this.dateFin);
+		
+		return jour * this.getChambre().getPrix();
+	}
+	
 	
 	public Long getId() {
 		return id;
@@ -75,6 +91,14 @@ public class Facture {
 
 	public void setChambre(Chambre chambre) {
 		this.chambre = chambre;
+	}
+
+	public FactureType getFactureType() {
+		return factureType;
+	}
+
+	public void setFactureType(FactureType factureType) {
+		this.factureType = factureType;
 	}
 	
 	

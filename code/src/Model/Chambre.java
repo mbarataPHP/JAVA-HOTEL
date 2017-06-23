@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import Annotation.Model;
 import Connection.Connection;
 
+
 @Model(entity="Chambre")
 public class Chambre extends Parent.ModelParent{
 	
@@ -61,7 +62,7 @@ public class Chambre extends Parent.ModelParent{
 		PreparedStatement ts;
 		Entity.Chambre chambre = null;
 		try {
-			ts = this.getEntityManager().prepareStatement("SELECT * FROM chambre LEFT JOIN type_chambre ON chambre.id_type = type_chambre.id LEFT JOIN etage  ON chambre.id_etage = etage.id where id=?");
+			ts = this.getEntityManager().prepareStatement("SELECT * FROM chambre LEFT JOIN type_chambre ON chambre.id_type = type_chambre.id LEFT JOIN etage  ON chambre.id_etage = etage.id where chambre.id=?");
 			ts.setLong(1, id);
 			ResultSet rs = ts.executeQuery();
 			 while (rs.next()) {
@@ -71,6 +72,7 @@ public class Chambre extends Parent.ModelParent{
 				 chambre.setPrix(rs.getFloat("chambre.prix"));
 				 
 					Connection connect = (Connection) this.getDependance().get("connection");
+					
 					Etage etageModel = (Etage) connect.getModel("Model.Etage");
 					chambre.setEtage(etageModel.find(rs.getLong("etage.id")));
 					

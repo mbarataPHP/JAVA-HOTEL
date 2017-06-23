@@ -48,7 +48,8 @@ create table chambre(
 CREATE TABLE facture(
 	id BIGINT AUTO_INCREMENT NOT NULL, 
 	date_debut DATETIME,
-	date_fin VARCHAR(255), 
+	date_fin DATETIME, 
+	facture_type VARCHAR(255), 
 	id_client BIGINT,
 	id_chambre BIGINT,
 	PRIMARY KEY (id)

@@ -13,11 +13,20 @@ public enum TypeEnum {
 	TypeEnum(String text) {
 		this.text = text;
 	}
-
+	
 	public String getText() {
 		return this.text;
 	}
-
+	
+	public static String fromEnum(TypeEnum TypeUtilisateur){
+		for (TypeEnum b : TypeEnum.values()) {
+			if (b==TypeUtilisateur) {
+				return b.text;
+			}
+		}
+		return null;
+	}
+	
 	public static TypeEnum fromString(String text) {
 		for (TypeEnum b : TypeEnum.values()) {
 			if (b.text.equalsIgnoreCase(text)) {

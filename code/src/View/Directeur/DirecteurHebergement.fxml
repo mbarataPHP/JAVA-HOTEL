@@ -11,6 +11,7 @@
 	</children>
 	<children>
 		<Button layoutX="438.0" layoutY="263.0" mnemonicParsing="false" onAction="#createClient" text="ajouter un nouveau client" />
-      <Button layoutX="438.0" layoutY="312.0" mnemonicParsing="false" onAction="#reservation" prefHeight="25.0" prefWidth="151.0" text="voir les réservations" />
+      	<Button layoutX="438.0" layoutY="312.0" mnemonicParsing="false" onAction="#reservation" prefHeight="25.0" prefWidth="151.0" text="voir les réservations" />
 	</children>
 </AnchorPane>
+<!-- "factures" -->

@@ -55,5 +55,7 @@ public class Personne{
 	}
 	
 	
-	
+	public String toString(){
+		return this.lastname+" "+this.firstname;
+	}
 }

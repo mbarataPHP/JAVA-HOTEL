@@ -7,6 +7,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 import Annotation.Model;
 import Annotation.View;
@@ -52,6 +53,8 @@ public abstract class ModelParent {
 	}
 	
 	
-	
+	public java.sql.Date convertToSqlDate(Date utilDate){
+	    return new java.sql.Date(utilDate.getTime());
+	}
 	
 }

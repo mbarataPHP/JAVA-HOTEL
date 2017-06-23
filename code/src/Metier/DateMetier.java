@@ -1,6 +1,8 @@
 package Metier;
 import java.util.Date;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -40,10 +42,10 @@ public class DateMetier {
 	}
 	
 	/**
-	 * 
-	 * @param local
-	 * @param local2
-	 * @return
+	 * Cette méthode compare si la date localBefore est bien plus petit ou egal à la date localAfter
+	 * @param localBefore
+	 * @param localAfter
+	 * @return boolean
 	 */
 	public static boolean compare(LocalDate localBefore, LocalDate localAfter){
 		boolean bool = false;
@@ -55,5 +57,31 @@ public class DateMetier {
 		}
 		
 		return bool;
+	}
+	
+	/**
+	 * Cette méthode converti un object Date en chaine de caractere sous un format FR
+	 * @param date
+	 * @return String
+	 */
+	public static String getFormatDateFr(Date date){
+		SimpleDateFormat ft = new SimpleDateFormat ("EEEE dd MMMM yyyy", Locale.FRENCH);
+		
+		
+		return ft.format(date);
+	}
+	
+	
+	/**
+	 * Cette méthode compte le nbr jour intervalle entre deux dates
+	 * @param dateDebut
+	 * @param dateFin
+	 * @return
+	 */
+	public static long nbrJourIntervalle(Date dateDebut, Date dateFin){
+
+	    long diff = dateFin.getTime() - dateDebut.getTime();
+	    
+		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)+1;
 	}
 }
