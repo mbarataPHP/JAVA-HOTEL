@@ -71,7 +71,12 @@ public class DirecteurRoleCtrl  extends Parent.Ctrl {
                                     btn.setOnAction( ( ActionEvent event ) ->
                                             {
                                                 Role role = getTableView().getItems().get( getIndex() );
-                                                System.out.println("modif");
+                                              
+                                                String paramaters[][] = new String[1][2];
+                                                paramaters[0][0] = "idRole";
+                                                paramaters[0][1] = Long.toString(role.getId());
+                                                
+                                                route.get("Directeur/UpdateRoleDirecteurHotel.fxml", paramaters);
                                                 
                                     } );
                                     setGraphic( btn );

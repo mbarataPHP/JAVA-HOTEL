@@ -79,7 +79,12 @@ public class UserDirecteurHotelCtrl extends Parent.Ctrl{
                                     btn.setOnAction( ( ActionEvent event ) ->
                                             {
                                                 Utilisateur Utilisateur = getTableView().getItems().get( getIndex() );
-                                                System.out.println("modif");
+                                                
+                                                String paramaters[][] = new String[1][2];
+                                                paramaters[0][0] = "idUser";
+                                                paramaters[0][1] = Long.toString(Utilisateur.getId());
+                                                
+                                                route.get("Directeur/UserDirecteurUpdate.fxml", paramaters);
                                                 
                                     } );
                                     setGraphic( btn );

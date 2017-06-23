@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="C:\Users\Mathieu\.p2\pool\plugins\org.hamcrest.core_1.3.0.v201303031735.jar;D:\G4\HOTEL\JAVA-HOTEL\extension\mysql-connector-java-5.1.41-bin.jar;C:\Users\Mathieu\Downloads\jsch-0.1.54.jar;C:\Users\Mathieu\.p2\pool\plugins\org.eclipse.fx.ide.css.jfx8_2.4.0.201605112122.jar;C:\Users\Mathieu\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar" destdir="D:\G4\HOTEL\JAVA-HOTEL\code\doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="Log,Parent,Dependance,Include.Controller,ViewObject,Model,Connection,Annotation,Metier,Entity,Enum,Session,Controller,data,Route,test" source="1.8" sourcefiles="D:\G4\HOTEL\JAVA-HOTEL\code\src\Main.java" sourcepath="D:\G4\HOTEL\JAVA-HOTEL\code\src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
