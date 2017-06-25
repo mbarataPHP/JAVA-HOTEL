@@ -17,6 +17,8 @@ ADD tools .
 RUN /bin/bash -c "source /task/kernel.sh" 
 
 
+ENTRYPOINT "/task/roles/services/templates/starts_services.sh" && /bin/bash
+
 
 #on fait un mount de html
 
