@@ -2,18 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.TableView?>
 
 <AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
-	<children>
+   	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
    <children>
-         <Button layoutX="783.0" layoutY="196.0" mnemonicParsing="false" onAction="#ajoutReservation" text="ajout une réservation" />
-   		<TableView fx:id="factures" layoutX="102.0" layoutY="260.0" prefHeight="445.0" prefWidth="809.0">
-		
-		</TableView>
+      <Button layoutX="474.0" layoutY="355.0" mnemonicParsing="false" onAction="#role" text="menu" />
    </children>
 </AnchorPane>

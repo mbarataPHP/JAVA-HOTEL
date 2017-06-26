@@ -16,7 +16,7 @@ public class DirecteurHotelCtrl extends Parent.Ctrl{
 		 switch(data){
 		 case "dashboard":
 			 
-			 
+			 route.get("Dashboard.fxml");
 			 break;
 			 
 		 case "role":

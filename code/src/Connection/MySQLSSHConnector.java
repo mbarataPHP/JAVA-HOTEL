@@ -18,7 +18,7 @@ public class MySQLSSHConnector {
 		String db2Url = "jdbc:mysql://localhost:"+lport+"/hotel?autoReconnect=true&useSSL=false";
 
 		String dbUsr = "root";
-		String dbPwd = "";
+		String dbPwd = null;
 		
 		try {
 			Class.forName(driverName);

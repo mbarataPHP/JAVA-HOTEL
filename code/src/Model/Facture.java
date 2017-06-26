@@ -15,6 +15,47 @@ import Enum.FactureType;
 public class Facture extends Parent.ModelParent{
 	
 	/**
+	 * Cette méthode permet de retourner tout les 
+	 * @param now
+	 * @return
+	 */
+	public double  getTauxRemp(Date now){
+		PreparedStatement ts;
+		double  moy = 0;
+		Connection connect = (Connection) this.getDependance().get("connection");
+		Chambre chambreModel = (Chambre) connect.getModel("Model.Chambre");
+		int nbrChambre = chambreModel.findAll().size();
+		int nbrReservation = 0;
+		
+		try {
+			ts = this.getEntityManager().prepareStatement("SELECT count(*) as total FROM facture WHERE facture.date_debut<=? and facture.date_fin>=?");
+			ts.setDate(1, this.convertToSqlDate(now));
+			ts.setDate(2, this.convertToSqlDate(now));
+			
+			ResultSet rs = ts.executeQuery();
+			
+			while (rs.next()) {
+				nbrReservation = rs.getInt("total");
+				if(nbrChambre!=0){
+					
+					moy = (double) nbrReservation/nbrChambre;
+					moy = moy * 100;
+					
+				}else{
+					moy = 0;
+				}
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return moy;
+	}
+	
+	/**
 	 * Cette méthode permet de vérifie si la chambre est libre par raport la date de debut et la date de fin
 	 * @param dateBefore
 	 * @param dateAfter
@@ -24,8 +65,10 @@ public class Facture extends Parent.ModelParent{
 	public Entity.Facture isChambreFree(Date dateBefore, Date dateAfter, Entity.Chambre chambre){
 		Entity.Facture facture = null;
 		PreparedStatement ts;
-		
-		
+		Connection connect = (Connection) this.getDependance().get("connection");
+		Client clientModel = (Client) connect.getModel("Model.Client");
+		Chambre chambreModel = (Chambre) connect.getModel("Model.Chambre");
+		 
 		try{
 			ts = this.getEntityManager().prepareStatement(""
 					+ " SELECT facture.facture_type, facture.id, facture.date_debut, facture.date_fin, client.id, chambre.id "
@@ -63,9 +106,8 @@ public class Facture extends Parent.ModelParent{
 			ResultSet rs = ts.executeQuery();
 			while (rs.next()) {
 				facture = new Entity.Facture();
-				 Connection connect = (Connection) this.getDependance().get("connection");
-				 Client clientModel = (Client) connect.getModel("Model.Client");
-				 Chambre chambreModel = (Chambre) connect.getModel("Model.Chambre");
+				 
+				 
 				 
 				 
 				 facture.setClient(clientModel.find(rs.getLong("client.id")));

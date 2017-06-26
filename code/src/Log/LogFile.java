@@ -18,8 +18,13 @@ public class LogFile {
 		this.title = title;
 		this.env = env;
 	}
-	
-	
+	public void read(String read, Environment env){
+		
+	}
+	public void close(){
+		
+	}
+	/*
 	public void read(String read, Environment env){
 		
 		//Si le read n'existe pas encore
@@ -46,5 +51,5 @@ public class LogFile {
 	public void close(){
 		
 		this.writer.close();
-	}
+	}*/
 }

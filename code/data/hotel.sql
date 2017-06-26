@@ -18,11 +18,19 @@ INSERT INTO `role` (`id`, `type_role`) VALUES
 (6, 'Chef de maintenance');
 
 
+INSERT INTO menu(id, nom_menu, prix) VALUES
+(1, 'menu 1', 12.65),
+(3, 'menu 2', 10.37),
+(2, 'menu 3', 32.83);
+
+
 -- password = 123456
 INSERT INTO `utilisateur` (`id`, `lastname`, login, `mail`, `firstname`, `password`, `id_role`) VALUES
 (1, 'St-Pierre', 'jst-pierre', 'JeanSt-Pierre@jourrapide.com', 'Jean', '123456', 1),
 (2, 'St-paul', 'jst-paul', 'JeanSt-Pierre@paul.com', 'Jean', '123456', 3),
-(3, 'Konovalova', 'Anisa-Konovalova', 'Anisa@Konovalova.ru', 'Anisa', '123456', 4);
+(3, 'Konovalova', 'ata-Konovalova', 'ata@Konovalova.ru', 'ata', '123456', 4),
+(4, 'cartman', 'eric-cartman', 'eric@cartman.com', 'eric', '123456', 2);
+
 
 INSERT INTO client(id, lastname, firstname, mail) VALUES
 (1, 'toto', 'dude', 'toto@dude.com'),

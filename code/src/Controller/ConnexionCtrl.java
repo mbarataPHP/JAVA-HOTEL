@@ -39,6 +39,9 @@ public class ConnexionCtrl extends Parent.Ctrl{
 			}else if (utilisateur.getRole().getTypeRole().equals("Chef de réception")){
 				Route route = (Route) this.dependance.get("route");
 				route.get("Directeur/ChefDeReception.fxml");
+			}else if(utilisateur.getRole().getTypeRole().equals("Directeur du restaurant")){
+				Route route = (Route) this.dependance.get("route");
+				route.get("Directeur/DirecteurRestaurant.fxml");
 			}
 			
 		}else{

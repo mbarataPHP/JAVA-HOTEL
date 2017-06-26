@@ -88,6 +88,48 @@ public class User extends Parent.ModelParent{
 	
 	}
 	
+	/**
+	 * Cette méthode permet de retourner tout les utilisateurs par role
+	 * @param roleParam
+	 * @return
+	 */
+	public Collection<Utilisateur> getUsersByRole(Entity.Role roleParam){
+		PreparedStatement ts;
+		
+		LinkedList<Utilisateur> users = new LinkedList<Utilisateur>();
+		
+		try {
+			ts = this.getEntityManager().prepareStatement("SELECT * FROM utilisateur LEFT JOIN role ON utilisateur.id_role = role.id WHERE utilisateur.id_role = ?");
+			ts.setLong(1, roleParam.getId());
+			
+			ResultSet rs = ts.executeQuery();
+			 while (rs.next()) {
+				 Utilisateur user = new Utilisateur();
+				 
+				 user.setId(rs.getLong("utilisateur.id"));
+				 user.setLastname(rs.getString("lastname"));
+				 user.setFirstname(rs.getString("firstname"));
+				 user.setLogin(rs.getString("login"));
+				 user.setPassword(rs.getString("password"));
+				 
+				 Entity.Role role = new Entity.Role();
+				 role.setId(rs.getLong("role.id"));
+				 role.setTypeRole(rs.getString("type_role"));
+				 
+				 user.setRole(role);
+				 
+				 users.add(user);
+			 }
+		}catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		 return users;
+	}
+	
+	
 	public boolean MailExistUpdate(String mail, Long idUser){
 		PreparedStatement ts;
 	

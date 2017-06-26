@@ -55,6 +55,13 @@ CREATE TABLE facture(
 	PRIMARY KEY (id)
 );
 
+CREATE TABLE menu(
+	id BIGINT AUTO_INCREMENT NOT NULL, 
+	nom_menu varchar(200) not null,
+	prix float not null,
+	PRIMARY KEY (id)
+);
+
 ALTER TABLE utilisateur ADD CONSTRAINT fk_utilisateur_id_role FOREIGN KEY (id_role) REFERENCES role (id);
 ALTER TABLE chambre ADD CONSTRAINT fk_chambre_id_type FOREIGN KEY (id_type) REFERENCES type_chambre (id);
 ALTER TABLE chambre ADD CONSTRAINT fk_chambre_id_etage FOREIGN KEY (id_etage) REFERENCES etage (id);

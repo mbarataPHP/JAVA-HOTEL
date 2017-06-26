@@ -52,7 +52,7 @@ public class Chambre extends Parent.ModelParent{
 		return chambres;
 	}
 	
-	
+
 	/**
 	 * 
 	 * @param id

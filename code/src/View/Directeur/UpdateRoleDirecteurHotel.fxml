@@ -9,9 +9,9 @@
 
 <AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
-    		<fx:include source="../Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="../Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="../Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
+    		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
+    		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
+    		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
    <children>
       <Pane layoutX="343.0" layoutY="174.0" prefHeight="452.0" prefWidth="314.0" style="-fx-border-color: #AAAAAA; -fx-background-color: #EFEFEF;">

@@ -44,7 +44,7 @@ public class UserDirecteurHotelCtrl extends Parent.Ctrl{
 		
 		ObservableList<Utilisateur> data  = FXCollections.observableArrayList(user.listUser());
 		
-		TableColumn firstNameCol = new TableColumn( "prÃ©nom" );
+		TableColumn firstNameCol = new TableColumn( "prénom" );
         firstNameCol.setCellValueFactory( new PropertyValueFactory<>( "firstname" ) );
 
         TableColumn lastNameCol = new TableColumn( "nom" );

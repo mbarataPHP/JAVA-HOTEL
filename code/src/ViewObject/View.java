@@ -1,6 +1,7 @@
 package ViewObject;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import Dependance.Dependance;
 import javafx.fxml.FXMLLoader;
@@ -31,18 +32,18 @@ public class View {
 	
 	private void callViewScene(String url, String title,  Object controller, String[] css) throws IOException{
 		
-		url = "../view/"+url;
-	
+		url = "/View/"+url;
 		
-
+	
 		// Localisation du fichier FXML.
 	      // Création du loader.
 			FXMLLoader fxmlLoader;
 	
-	    	   fxmlLoader = new FXMLLoader( getClass().getResource(url));
+	    	   fxmlLoader = new FXMLLoader( this.getClass().getResource(url));
 	    
 	    	   fxmlLoader.setController(controller);
 	      // Chargement du FXML.
+	    	 
 	       AnchorPane root = (AnchorPane) fxmlLoader.load();
 	       //root.getChildren().setAll( fxmlLoader.load());
 	     
@@ -52,7 +53,7 @@ public class View {
 	      
 	      for(int i=0;i<css.length;i++){
 	    	  if(!css[i].equals("")){
-	    		  scene.getStylesheets().add(getClass().getResource("../css/"+css[i]).toExternalForm());
+	    		  scene.getStylesheets().add(getClass().getResource("/css/"+css[i]).toExternalForm());
 	    	  }
 	      }
 	      //Scene scene2 = primaryStage.getScene();
