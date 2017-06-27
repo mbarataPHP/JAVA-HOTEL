@@ -432,7 +432,7 @@ public class ChefDeReceptionCtrl extends Parent.Ctrl {
                                              if (result.get() == buttonOK){
                                              	 //user.remove(Utilisateur);
                                             	 factureModel.remove(facture);
-                                                 route.get("Reservation/Reservation.fxml");
+                                                 route.get("Directeur/ChefDeReception.fxml");
                                              }
                                              
                                              /*
@@ -456,4 +456,7 @@ public class ChefDeReceptionCtrl extends Parent.Ctrl {
 	       actionFacture.setCellFactory( cellFactoryDateFin );
 	       return actionFacture;
 	}
+	
+	
+	
 }
