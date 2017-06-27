@@ -12,11 +12,15 @@ import Route.Route;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 @View(view="Directeur/UserDirecteurUpdate.fxml", css={"base.css"})
 public class UserDirecteurUpdate extends Parent.Ctrl{
 	private Utilisateur user;
+	
+	@FXML
+	private Label erreur;
 	
 	@FXML
 	private TextField firstname;
@@ -70,8 +74,13 @@ public class UserDirecteurUpdate extends Parent.Ctrl{
 				
 				Route route = (Route) this.dependance.get("route");
 				route.get("Directeur/UserDirecteurHotel.fxml");
+				
+			}else{
+				this.erreur.setText("Le login ou l'email existe déjà");
 			}
 			
+		}else{
+			this.erreur.setText("Un ou plusieurs champs sont vides.");
 		}
 		
 	}

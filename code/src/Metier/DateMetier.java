@@ -3,8 +3,11 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
@@ -31,14 +34,26 @@ public class DateMetier {
 	}
 	
 	/**
-	 * Cette méthode convertie java.time.LocalDate en Date
+	 * Cette méthode convertire java.time.LocalDate en Date
 	 * @param local
 	 * @return
 	 */
 	public static Date converLocaleToDate(LocalDate local){
+		
 		Date date = Date.from(local.atStartOfDay(ZoneId.systemDefault()).toInstant());
 		
 		return date;
+	}
+	
+	
+	/**
+	 * Cette méthode permet de convertire Date en java.time.LocalDate
+	 * @param date
+	 * @return
+	 */
+	public static LocalDate converDateToLocal(Date date){
+		  Instant instant = Instant.ofEpochMilli(date.getTime());
+		  return LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate();
 	}
 	
 	/**

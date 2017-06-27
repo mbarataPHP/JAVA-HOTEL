@@ -21,7 +21,9 @@
             <Label id="titreConnection" layoutX="26.0" layoutY="20.0" prefHeight="48.0" prefWidth="260.0" style="-fx-font-size: 18;" stylesheets="@../css/connexion.css" text="Se connecter">
                <effect>
                   <Blend mode="BLUE" />
-               </effect></Label>
+               </effect>
+             </Label>
+              <Label fx:id="erreur" layoutX="312.0" layoutY="36.0" prefHeight="17.0" prefWidth="300.0" text="" textFill="RED" />
          </children>
       </AnchorPane>
 	</children>

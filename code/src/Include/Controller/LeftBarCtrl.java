@@ -25,6 +25,9 @@ public class LeftBarCtrl extends Parent.IncludeCtrl{
 			case "Chef de réception":
 				route.get("Directeur/ChefDeReception.fxml");
 			break;
+			case "Directeur du restaurant":
+				route.get("Directeur/DirecteurRestaurant.fxml");
+			break;
 		}
 	}
 }

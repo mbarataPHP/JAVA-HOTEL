@@ -6,10 +6,14 @@ import Route.Route;
 import Session.Session;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 @View(view="Connexion.fxml", css={"base.css", "connexion.css"})
 public class ConnexionCtrl extends Parent.Ctrl{
+	
+	@FXML
+	private Label erreur;
 	
 	@FXML
 	private TextField email;
@@ -45,7 +49,7 @@ public class ConnexionCtrl extends Parent.Ctrl{
 			}
 			
 		}else{
-			System.out.println("perdu!!!");
+			this.erreur.setText("connexion invalide");
 		}
 	}
 }

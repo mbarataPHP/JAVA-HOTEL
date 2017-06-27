@@ -6,6 +6,7 @@ import Entity.Role;
 import Route.Route;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 @View(view="Directeur/UpdateRoleDirecteurHotel.fxml", css={"base.css"})
@@ -14,6 +15,9 @@ public class UpdateRoleCtrl extends Parent.Ctrl{
 	private TextField text;
 	
 	private Role role;
+	
+	@FXML
+	private Label erreur;
 	
 	@Override
 	public void initialize() {
@@ -39,6 +43,8 @@ public class UpdateRoleCtrl extends Parent.Ctrl{
 			roleModel.update(role);
 			
 			route.get("Directeur/DirecteurRole.fxml");
+		}else{
+			this.erreur.setText("le champ ne doit pas être vide");
 		}
 	}
 }
