@@ -12,7 +12,7 @@
                 <Font name="Arial Black" size="24.0" />
             </font>
         </Text>
-		<Button layoutX="882.0" layoutY="24.0" mnemonicParsing="false" onAction="#deconnexion" prefHeight="41.0" prefWidth="132.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="déconnexion">
+		<Button layoutX="868.0" layoutY="24.0" mnemonicParsing="false" onAction="#deconnexion" prefHeight="41.0" prefWidth="132.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Déconnexion">
       <font>
          <Font size="18.0" />
       </font></Button>

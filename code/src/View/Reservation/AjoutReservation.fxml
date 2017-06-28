@@ -46,10 +46,15 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Button layoutX="725.0" layoutY="561.0" mnemonicParsing="false" onAction="#create" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Créer">
+      <Button layoutX="467.0" layoutY="560.0" mnemonicParsing="false" onAction="#create" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Créer">
          <font>
             <Font size="18.0" />
          </font></Button>
+      <Label layoutX="427.0" layoutY="82.0" text="Création d'une réservation ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
       
    </children>
 </AnchorPane>
