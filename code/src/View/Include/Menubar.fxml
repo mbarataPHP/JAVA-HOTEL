@@ -4,6 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.Pane?>
 
 <AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="200.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Include.Controller.MenubarCtrl">
       
@@ -16,4 +17,6 @@
       <font>
          <Font size="18.0" />
       </font></Button>
+    <Pane layoutY="75.0" prefHeight="78.0" prefWidth="1000.0" style="-fx-background-color: F4A11E;" />
+    <Pane layoutX="222.0" layoutY="160.0" prefHeight="2.0" prefWidth="778.0" style="-fx-background-color: A0BE60;" />
 </AnchorPane>

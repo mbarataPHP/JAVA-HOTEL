@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?xml-stylesheet href="base.css" type="text/css"?>
 
-<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
     		<fx:include source="../Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="../Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
