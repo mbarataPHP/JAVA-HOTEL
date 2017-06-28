@@ -62,6 +62,12 @@ CREATE TABLE menu(
 	PRIMARY KEY (id)
 );
 
+CREATE TABLE incident(
+	id BIGINT AUTO_INCREMENT NOT NULL, 
+	description longtext NOT NULL,
+	PRIMARY KEY (id)
+);
+
 ALTER TABLE utilisateur ADD CONSTRAINT fk_utilisateur_id_role FOREIGN KEY (id_role) REFERENCES role (id);
 ALTER TABLE chambre ADD CONSTRAINT fk_chambre_id_type FOREIGN KEY (id_type) REFERENCES type_chambre (id);
 ALTER TABLE chambre ADD CONSTRAINT fk_chambre_id_etage FOREIGN KEY (id_etage) REFERENCES etage (id);
