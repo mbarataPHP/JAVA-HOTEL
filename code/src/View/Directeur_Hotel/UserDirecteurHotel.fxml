@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+    		<fx:include source="../Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
+    		<fx:include source="../Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
+    		<fx:include source="../Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
+	</children>
+	<children>
+		<Button layoutX="834.0" layoutY="165.0" mnemonicParsing="false" onAction="#creation" prefHeight="31.0" prefWidth="83.0" text="création" />
+		
+		<TableView fx:id="TVUser" layoutX="240.0" layoutY="207.0" prefHeight="445.0" prefWidth="697.0">
+		
+		</TableView>
+	</children>
+</AnchorPane>
