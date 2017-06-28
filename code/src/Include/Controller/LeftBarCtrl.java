@@ -16,13 +16,13 @@ public class LeftBarCtrl extends Parent.IncludeCtrl{
 		String role = session.getUtilisateur().getRole().getTypeRole();
 	
 		switch(role){
-			case "Directeur de l'hÃ´tel":
+			case "Directeur de l’hôtel":
 				route.get("Directeur/DirecteurHotel.fxml");
 			break;
-			case "Directeur d'hÃ©bergement":
+			case "Directeur d’hébergement":
 				route.get("Directeur/DirecteurHebergement.fxml");
 			break;
-			case "Chef de rÃ©ception":
+			case "Chef de réception":
 				route.get("Directeur/ChefDeReception.fxml");
 			break;
 			case "Directeur du restaurant":
