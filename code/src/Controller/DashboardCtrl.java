@@ -60,10 +60,14 @@ public class DashboardCtrl extends Parent.Ctrl{
 			totalSejour += DateMetier.nbrJourIntervalle(facture.getDateDebut(), facture.getDateFin());
 		}
 		
+		if(factures.size()==0){
+			moySejour = (double) totalSejour / factures.size();
+			
+			this.moySejour.setText(nf.format(moySejour)+" jour(s)");
+		}else{
+			this.moySejour.setText("0 jour");
+		}
 		
-		moySejour = (double) totalSejour / factures.size();
-		
-		this.moySejour.setText(nf.format(moySejour)+" jour(s)");
 		
 		ObservableList<Role> data  = FXCollections.observableArrayList(roleModel.all());
 		

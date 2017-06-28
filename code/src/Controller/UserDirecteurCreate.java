@@ -74,7 +74,7 @@ public class UserDirecteurCreate extends Parent.Ctrl{
 				Route route = (Route) this.dependance.get("route");
 				route.get("Directeur/UserDirecteurHotel.fxml");
 			}else{
-				this.erreur.setText("Le login ou l'email existe déjà");
+				this.erreur.setText("Le login ou l'email existe déjà ou l'email n'est valide");
 			}
 			
 		}else{
