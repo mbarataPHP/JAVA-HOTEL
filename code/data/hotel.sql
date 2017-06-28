@@ -12,13 +12,13 @@ SET SQL_SAFE_UPDATES = 1;
 
 
 INSERT INTO `role` (`id`, `type_role`) VALUES
-(1, 'Directeur de lï¿½hï¿½tel'),
+(1, 'Directeur de l’hôtel'),
 (2, 'Directeur du restaurant'),
-(3, 'Directeur dï¿½hï¿½bergement'),
-(4, 'Chef de rï¿½ception'),
-(5, 'Gouvernante gï¿½nï¿½rale'),
-(6, 'Chef de maintenance');
-
+(3, 'Directeur d’hébergement'),
+(4, 'Chef de réception'),
+(5, 'Gouvernante générale'),
+(6, 'Chef de maintenance'),
+(7, 'Spa manager');
 
 INSERT INTO menu(id, nom_menu, prix) VALUES
 (1, 'menu 1', 12.65),
@@ -33,8 +33,8 @@ INSERT INTO `utilisateur` (`id`, `lastname`, login, `mail`, `firstname`, `passwo
 (3, 'Konovalova', 'ata-Konovalova', 'ata@Konovalova.ru', 'ata', '123456', 4),
 (4, 'cartman', 'eric-cartman', 'eric@cartman.com', 'eric', '123456', 2),
 (5, 'Zoidberg ', 'john-zoidberg', 'john@zoidberg.com', 'John', '123456', 5),
-(6, 'Rodríguez ', 'bender-rodríguez', 'bender@rodríguez.com', 'Bender', '123456', 6);
-
+(6, 'Rodríguez ', 'bender-rodríguez', 'bender@rodríguez.com', 'Bender', '123456', 6),
+(7, 'marsh', 'randy-marsh', 'randy@marsh.com', 'randy', '123456', 7);
 
 INSERT INTO client(id, lastname, firstname, mail) VALUES
 (1, 'toto', 'dude', 'toto@dude.com'),

@@ -52,6 +52,10 @@ public class ConnexionCtrl extends Parent.Ctrl{
 			}else if(utilisateur.getRole().getTypeRole().equals("Chef de maintenance")){
 				Route route = (Route) this.dependance.get("route");
 				route.get("Maintenance/Maintenance.fxml");
+			}else if(utilisateur.getRole().getTypeRole().equals("Spa manager")){
+				
+				Route route = (Route) this.dependance.get("route");
+				route.get("Spa/Spa.fxml");
 			}
 			
 			//Gouvernante/Gouvernante.fxml
