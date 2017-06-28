@@ -31,5 +31,10 @@
             <Label fx:id="erreur" layoutX="142.0" layoutY="218.0" text="" textFill="RED" />
          </children>
       </Pane>
+      <Label layoutX="412.0" layoutY="113.0" text="Création de rôle ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
