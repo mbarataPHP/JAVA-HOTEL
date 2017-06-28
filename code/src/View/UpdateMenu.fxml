@@ -15,11 +15,11 @@
    <children>
       <AnchorPane layoutX="290.0" layoutY="160.0" prefHeight="430.0" prefWidth="421.0">
          <children>
-            <Label layoutX="176.0" layoutY="57.0" prefHeight="27.0" prefWidth="201.0" text="Modification d'un menu">
+            <Label layoutX="157.0" layoutY="140.0" prefHeight="27.0" prefWidth="201.0" text="Modification d'un menu">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <AnchorPane layoutX="46.0" layoutY="128.0" prefHeight="60.0" prefWidth="334.0">
+            <AnchorPane layoutX="46.0" layoutY="204.0" prefHeight="60.0" prefWidth="334.0">
                <children>
                   <Label layoutX="40.0" layoutY="28.0" text="menu" />
                   <TextField fx:id="menu" layoutX="141.0" layoutY="24.0" />
