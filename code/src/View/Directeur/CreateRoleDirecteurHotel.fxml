@@ -7,7 +7,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
@@ -17,12 +18,12 @@
       <Pane layoutX="343.0" layoutY="174.0" prefHeight="452.0" prefWidth="314.0" style="-fx-border-color: #AAAAAA; -fx-background-color: #EFEFEF;">
          <children>
             <TextField fx:id="text" layoutX="14.0" layoutY="139.0" prefHeight="33.0" prefWidth="284.0" />
-            <Label layoutX="67.0" layoutY="72.0" text="type de role">
+            <Label layoutX="67.0" layoutY="72.0" style="-fx-font-weight: bold;" text="type de role">
                <font>
                   <Font size="34.0" />
                </font>
             </Label>
-            <Button layoutX="92.0" layoutY="291.0" mnemonicParsing="false" onAction="#create" prefHeight="44.0" prefWidth="128.0" text="Créer">
+            <Button layoutX="92.0" layoutY="291.0" mnemonicParsing="false" onAction="#create" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E; -fx-background-radius: 15;" text="Créer">
                <font>
                   <Font size="20.0" />
                </font>
