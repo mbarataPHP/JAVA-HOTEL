@@ -5,8 +5,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
@@ -33,7 +34,15 @@
                   <Label layoutX="20.0" layoutY="34.0" prefHeight="17.0" prefWidth="56.0" text="mail:" />
                </children>
             </Pane>
-            <Button layoutX="71.0" layoutY="381.0" mnemonicParsing="false" onAction="#insertClient" text="créer" />
+            <Button layoutX="215.0" layoutY="371.0" mnemonicParsing="false" onAction="#insertClient" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Créer">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label layoutX="147.0" layoutY="34.0" text="Ajout d'un client ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

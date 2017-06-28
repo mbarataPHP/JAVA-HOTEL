@@ -4,8 +4,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
    	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
@@ -14,20 +15,26 @@
    <children>
       <AnchorPane layoutX="290.0" layoutY="160.0" prefHeight="430.0" prefWidth="421.0">
          <children>
-            <Label layoutX="183.0" layoutY="62.0" prefWidth="60.0" text="menu" />
-            <AnchorPane layoutX="46.0" layoutY="128.0" prefHeight="60.0" prefWidth="334.0">
+            <Label layoutX="183.0" layoutY="62.0" prefHeight="27.0" prefWidth="154.0" text="Ajout d'un menu ">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <AnchorPane layoutX="46.0" layoutY="185.0" prefHeight="60.0" prefWidth="334.0">
                <children>
-                  <Label layoutX="40.0" layoutY="28.0" text="menu" />
-                  <TextField  fx:id="menu" layoutX="141.0" layoutY="24.0" />
+                  <Label layoutX="40.0" layoutY="28.0" text="Menu" />
+                  <TextField fx:id="menu" layoutX="141.0" layoutY="24.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="46.0" layoutY="257.0" prefHeight="60.0" prefWidth="334.0">
                <children>
-                  <Label layoutX="40.0" layoutY="28.0" text="prix" />
+                  <Label layoutX="40.0" layoutY="28.0" text="Prix" />
                   <TextField fx:id="prix" layoutX="141.0" layoutY="24.0" />
                </children>
             </AnchorPane>
-            <Button layoutX="185.0" layoutY="372.0" mnemonicParsing="false" onAction="#ajout" text="ajouter" />
+            <Button layoutX="185.0" layoutY="372.0" mnemonicParsing="false" onAction="#ajout" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Ajouter">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
          </children>
       </AnchorPane>
    </children>
