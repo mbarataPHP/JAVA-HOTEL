@@ -2,14 +2,18 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
    	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
    <children>
-      <Button layoutX="474.0" layoutY="355.0" mnemonicParsing="false" onAction="#role" text="menu" />
+      <Button layoutX="449.0" layoutY="336.0" mnemonicParsing="false" onAction="#role" prefHeight="88.0" prefWidth="136.0" style="-fx-text-fill: #F4A11E; -fx-background-color: #212934;" text="menu">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
    </children>
 </AnchorPane>

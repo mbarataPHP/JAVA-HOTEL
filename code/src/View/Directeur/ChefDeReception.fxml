@@ -11,7 +11,7 @@
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
    <children>
-         <Button layoutX="783.0" layoutY="196.0" mnemonicParsing="false" onAction="#ajoutReservation" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="ajout une réservation" />
+         <Button layoutX="783.0" layoutY="196.0" mnemonicParsing="false" onAction="#ajoutReservation" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Ajouter une réservation" />
    		<TableView fx:id="factures" layoutX="102.0" layoutY="260.0" prefHeight="445.0" prefWidth="809.0">
 		
 		</TableView>

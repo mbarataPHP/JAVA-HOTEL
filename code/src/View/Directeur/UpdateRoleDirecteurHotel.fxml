@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
@@ -22,7 +22,7 @@
                   <Font size="34.0" />
                </font>
             </Label>
-            <Button layoutX="92.0" layoutY="291.0" mnemonicParsing="false" onAction="#update" prefHeight="44.0" prefWidth="128.0" text="Modifier">
+            <Button layoutX="92.0" layoutY="291.0" mnemonicParsing="false" onAction="#update" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Modifier">
                <font>
                   <Font size="20.0" />
                </font>
@@ -30,5 +30,10 @@
             <Label fx:id="erreur" layoutX="142.0" layoutY="218.0" text="" textFill="RED" />
          </children>
       </Pane>
+      <Label layoutX="376.0" layoutY="96.0" text="Modification des rôles  ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
