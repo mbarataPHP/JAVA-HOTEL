@@ -321,6 +321,43 @@ public class Facture extends Parent.ModelParent{
 		
 	}
 	
+	public Entity.Facture isFreeChambre(Entity.Chambre chambre, Date date){
+		PreparedStatement ts;
+		Entity.Facture facture = null;
+		Connection connect = (Connection) this.getDependance().get("connection");
+		
+		try {
+			ts = this.getEntityManager().prepareStatement("SELECT facture.facture_type, facture.id, facture.date_debut, facture.date_fin, client.id, chambre.id"
+					+ " FROM facture "
+					+ " LEFT JOIN client ON facture.id_client = client.id "
+					+ " LEFT JOIN chambre ON facture.id_chambre = chambre.id"
+					+ " WHERE chambre.id = ?"
+					+ " AND (facture.date_debut<=? and facture.date_fin>=?)");
+			ts.setLong(1, chambre.getId());
+			ts.setDate(2, this.convertToSqlDate(date));
+			ts.setDate(3, this.convertToSqlDate(date));
+			ResultSet rs = ts.executeQuery();
+			while (rs.next()) {
+				 facture = new Entity.Facture();
+				 
+				 Client clientModel = (Client) connect.getModel("Model.Client");
+				 Chambre chambreModel = (Chambre) connect.getModel("Model.Chambre");
+				 
+				 facture.setId(rs.getLong("facture.id"));
+				 facture.setClient(clientModel.find(rs.getLong("client.id")));
+				 facture.setChambre(chambreModel.find(rs.getLong("chambre.id")));
+				 facture.setFactureType(FactureType.fromString(rs.getString("facture.facture_type")));
+				 facture.setDateDebut(rs.getDate("facture.date_debut"));
+				 facture.setDateFin(rs.getDate("facture.date_fin"));
+			
+			 }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return facture;
+	}
+	
 	/**
 	 * Cette méthode permet de modifier une facture
 	 * @param facture

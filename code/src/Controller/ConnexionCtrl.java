@@ -46,8 +46,12 @@ public class ConnexionCtrl extends Parent.Ctrl{
 			}else if(utilisateur.getRole().getTypeRole().equals("Directeur du restaurant")){
 				Route route = (Route) this.dependance.get("route");
 				route.get("Directeur/DirecteurRestaurant.fxml");
+			}else if(utilisateur.getRole().getTypeRole().equals("Gouvernante générale")){
+				Route route = (Route) this.dependance.get("route");
+				route.get("Gouvernante/Gouvernante.fxml");
 			}
 			
+			//Gouvernante/Gouvernante.fxml
 		}else{
 			this.erreur.setText("connexion invalide");
 		}
