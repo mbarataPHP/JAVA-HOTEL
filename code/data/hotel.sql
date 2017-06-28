@@ -12,11 +12,11 @@ SET SQL_SAFE_UPDATES = 1;
 
 
 INSERT INTO `role` (`id`, `type_role`) VALUES
-(1, 'Directeur de l’hôtel'),
+(1, 'Directeur de lï¿½hï¿½tel'),
 (2, 'Directeur du restaurant'),
-(3, 'Directeur d’hébergement'),
-(4, 'Chef de réception'),
-(5, 'Gouvernante générale'),
+(3, 'Directeur dï¿½hï¿½bergement'),
+(4, 'Chef de rï¿½ception'),
+(5, 'Gouvernante gï¿½nï¿½rale'),
 (6, 'Chef de maintenance');
 
 

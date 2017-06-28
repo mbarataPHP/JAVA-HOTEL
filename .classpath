@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="code/src"/>
+	<classpathentry kind="lib" path="code/data/jsch-0.1.5.jar"/>
+	<classpathentry kind="lib" path="code/jsch-0.1.5.jar"/>
+	<classpathentry kind="lib" path="extension/jsch-0.1.54.jar"/>
+	<classpathentry kind="lib" path="extension/mysql-connector-java-5.1.41-bin.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="code/bin"/>
+</classpath>

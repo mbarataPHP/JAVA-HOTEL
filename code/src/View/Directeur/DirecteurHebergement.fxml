@@ -3,15 +3,16 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<!-- "factures" -->
+
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
 	<children>
-		<Button layoutX="438.0" layoutY="263.0" mnemonicParsing="false" onAction="#createClient" text="ajouter un nouveau client" />
-      	<Button layoutX="438.0" layoutY="312.0" mnemonicParsing="false" onAction="#reservation" prefHeight="25.0" prefWidth="151.0" text="voir les réservations" />
+		<Button layoutX="438.0" layoutY="263.0" mnemonicParsing="false" onAction="#createClient" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="ajouter un nouveau client" />
+      	<Button layoutX="438.0" layoutY="312.0" mnemonicParsing="false" onAction="#reservation" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="voir les réservations" />
 	</children>
 </AnchorPane>
-<!-- "factures" -->
