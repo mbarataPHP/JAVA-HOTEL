@@ -10,8 +10,8 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Include.Controller.LeftBarCtrl">
-	<ImageView fitHeight="40.0" fitWidth="187.0" layoutX="17.0" layoutY="24.0">
-		<Image url="@logo.jpg" />
+	<ImageView fitHeight="48.0" fitWidth="187.0" layoutX="17.0" layoutY="24.0">
+		<Image url="@logo.png" />
 	</ImageView>
    <Pane layoutY="152.0" prefHeight="647.0" prefWidth="213.0" style="-fx-background-color: #212934;">
       <children>

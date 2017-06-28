@@ -14,7 +14,10 @@
 	</children>
    <children>
       <TableView fx:id="TVRole" layoutX="141.0" layoutY="229.0" prefHeight="200.0" prefWidth="731.0" />
-      <Button layoutX="746.0" layoutY="179.0" mnemonicParsing="false" onAction="#create" prefHeight="30.0" prefWidth="126.0" style="-fx-text-fill: #F4A11E; -fx-background-color: #212934;" text="Création" />
+      <Button layoutX="746.0" layoutY="179.0" mnemonicParsing="false" onAction="#create" prefHeight="30.0" prefWidth="126.0" style="-fx-text-fill: #F4A11E; -fx-background-color: #212934;" text="Création">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
       <Label layoutX="171.0" layoutY="186.0" prefHeight="47.0" prefWidth="199.0" style="-fx-font-weight: bold;" text="Les roles" textFill="#1b1b1b">
          <font>
             <Font size="32.0" />

@@ -5,8 +5,9 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
@@ -45,7 +46,10 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Button layoutX="746.0" layoutY="560.0" mnemonicParsing="false" onAction="#create" text="modifier" />
+      <Button layoutX="713.0" layoutY="559.0" mnemonicParsing="false" onAction="#create" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Modifier">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
       
    </children>
 </AnchorPane>

@@ -23,7 +23,7 @@
                   <Font size="34.0" />
                </font>
             </Label>
-            <Button layoutX="92.0" layoutY="291.0" mnemonicParsing="false" onAction="#create" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E; -fx-background-radius: 15;" text="Créer">
+            <Button layoutX="92.0" layoutY="291.0" mnemonicParsing="false" onAction="#create" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Créer">
                <font>
                   <Font size="20.0" />
                </font>
@@ -31,7 +31,7 @@
             <Label fx:id="erreur" layoutX="142.0" layoutY="218.0" text="" textFill="RED" />
          </children>
       </Pane>
-      <Label layoutX="412.0" layoutY="113.0" text="Création de rôle ">
+      <Label layoutX="412.0" layoutY="117.0" text="Création de rôle ">
          <font>
             <Font size="24.0" />
          </font>
