@@ -30,7 +30,7 @@
       <Label layoutX="354.0" layoutY="501.0" prefHeight="17.0" prefWidth="52.0" text="login:" />
       <TextField fx:id="login" layoutX="446.0" layoutY="497.0" />
       <Label fx:id="erreur" layoutX="348.0" layoutY="224.0" prefHeight="17.0" prefWidth="300.0" text="" textFill="RED" />
-      <Label layoutX="470.0" layoutY="87.0" text="Création utilisateur ">
+      <Label layoutX="470.0" layoutY="135.0" text="Création utilisateur ">
          <font>
             <Font size="24.0" />
          </font>
