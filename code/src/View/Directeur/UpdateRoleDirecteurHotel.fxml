@@ -30,10 +30,10 @@
             <Label fx:id="erreur" layoutX="142.0" layoutY="218.0" text="" textFill="RED" />
          </children>
       </Pane>
-      <Label <Label layoutX="470.0" layoutY="151.0" text="Modification des rôles  ">
+      <Label layoutX="470.0" layoutY="151.0" text="Modification des rôles  ">
          <font>
             <Font size="24.0" />
          </font>
-      </Label>
+      </>
    </children>
 </AnchorPane>
