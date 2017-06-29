@@ -10,7 +10,6 @@
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
 	<children>
 		<Button layoutX="272.0" layoutY="375.0" mnemonicParsing="false" onAction="#createClient" prefHeight="51.0" prefWidth="306.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Ajouter un nouveau client">

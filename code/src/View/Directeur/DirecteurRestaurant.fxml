@@ -8,8 +8,7 @@
    	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
-	</children>
+    </children>
    <children>
       <Button layoutX="508.0" layoutY="376.0" mnemonicParsing="false" onAction="#role" prefHeight="88.0" prefWidth="136.0" style="-fx-text-fill: #F4A11E; -fx-background-color: #212934;" text="Menu">
          <font>

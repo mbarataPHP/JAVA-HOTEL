@@ -10,7 +10,6 @@
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
 	<children>
 		<Button layoutX="834.0" layoutY="258.0" mnemonicParsing="false" onAction="#creation" prefHeight="44.0" prefWidth="103.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E; -fx-font-size: 20; -fx-border-radius: 15;" text="création" />

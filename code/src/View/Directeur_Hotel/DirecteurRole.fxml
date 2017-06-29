@@ -10,8 +10,7 @@
 	<children>
     		<fx:include source="../Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="../Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="../Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
-	</children>
+    </children>
    <children>
       <TableView fx:id="TVRole" layoutX="248.0" layoutY="300.0" prefHeight="200.0" prefWidth="731.0" />
       <Button layoutX="771.0" layoutY="218.0" mnemonicParsing="false" onAction="#create" prefHeight="30.0" prefWidth="126.0" text="Création" />

@@ -12,8 +12,7 @@
 	<children>
     		<fx:include source="../Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="../Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="../Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
-	</children>
+    </children>
    <children>
       <Pane layoutX="343.0" layoutY="174.0" prefHeight="452.0" prefWidth="314.0" style="-fx-border-color: #AAAAAA; -fx-background-color: #EFEFEF;">
          <children>

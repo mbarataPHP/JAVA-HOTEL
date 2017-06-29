@@ -13,7 +13,6 @@
 	<children>
     	<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     	<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    	<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
 	<children>
 		<Label layoutX="337.0" layoutY="284.0" text="Type de role :" GridPane.columnIndex="0" GridPane.rowIndex="1" />

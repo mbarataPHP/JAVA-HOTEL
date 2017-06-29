@@ -11,8 +11,7 @@
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
-	</children>
+    </children>
    <children>
       <AnchorPane layoutX="354.0" layoutY="244.0" prefHeight="200.0" prefWidth="577.0" style="-fx-background-color: #DDD; -fx-border-color: #EEE;">
          <children>

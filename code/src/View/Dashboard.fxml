@@ -10,8 +10,7 @@
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
-	</children>
+    </children>
    <children>
       <Pane layoutX="328.0" layoutY="267.0" prefHeight="50.0" prefWidth="360.0">
          <children>

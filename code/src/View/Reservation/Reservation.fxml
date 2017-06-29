@@ -10,8 +10,7 @@
 	<children>
     		<fx:include source="/View/Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
-	</children>
+    </children>
    <children>
       <Button layoutX="836.0" layoutY="234.0" mnemonicParsing="false" onAction="#ajoutReservation" style="-fx-text-fill: #F4A11E; -fx-background-color: #212934;" text="Ajout d'une réservation">
          <font>

@@ -12,8 +12,7 @@
 	<children>
     		<fx:include source="../Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="../Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
-    		<fx:include source="../Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
-	</children>
+    </children>
 	<children>
 		<Label layoutX="337.0" layoutY="284.0" text="Type de role :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 		<ComboBox fx:id="rolesBoxs" layoutX="446.0" layoutY="280.0" prefWidth="200.0" promptText="choisissez un rôle" />
