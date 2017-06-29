@@ -58,7 +58,7 @@ public class View {
 	      }
 	      //Scene scene2 = primaryStage.getScene();
 	    
-	      
+	      primaryStage.setResizable(false);
 	      primaryStage.setScene(scene);
 	      primaryStage.setTitle(title);
 		  primaryStage.show();
