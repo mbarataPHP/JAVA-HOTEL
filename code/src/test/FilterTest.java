@@ -21,5 +21,24 @@ public class FilterTest extends TestParent{
 		
 		assertEquals(true, Filter.validate("toto@toto.fr")); 
 	}
-
+	
+	@Test
+	/**
+	 * Ce test va permettre de savoir si le prix correspond bien
+	 */
+	public void testFiltrePrix(){
+		assertEquals(false, Filter.validatePrix("")); 
+		
+		assertEquals(true, Filter.validatePrix("12,67")); 
+		
+		assertEquals(false, Filter.validatePrix("12,67567")); 
+		
+		assertEquals(false, Filter.validatePrix("B12,67")); 
+		
+		assertEquals(false, Filter.validatePrix("B12,6A"));
+		
+		assertEquals(true, Filter.validatePrix("12,6")); 
+		
+		assertEquals(false, Filter.validatePrix("12")); 
+	}
 }

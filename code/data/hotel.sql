@@ -37,9 +37,9 @@ INSERT INTO `utilisateur` (`id`, `lastname`, login, `mail`, `firstname`, `passwo
 (7, 'marsh', 'randy-marsh', 'randy@marsh.com', 'randy', '123456', 7);
 
 INSERT INTO client(id, lastname, firstname, mail) VALUES
-(1, 'toto', 'dude', 'toto@dude.com'),
-(2, 'lolo', 'connard', 'lolo@connard.com'),
-(3, 'putain', 'dddd', 'putain@dddd.com');
+(1, 'client_1', 'bob', 'bob@client_1.com'),
+(2, 'client_2', 'joe', 'joe@client_2.com'),
+(3, 'client_3', 'vladimir', 'vladimir@client_3.com');
 
 
 INSERT INTO etage(id, num_etage) VALUES
@@ -64,3 +64,6 @@ INSERT INTO chambre(id, nbr_place, id_etage, prix, id_type) VALUES
 (5, 2, 2, 650, 5),
 (6, 2, 1, 1050, 6),
 (7, 1, 2, 140, 1);
+
+INSERT INTO facture(date_debut, date_fin, facture_type, id_client, id_chambre) VALUES
+("2017-01-01", "2017-01-14", "en cours", 2, 6);

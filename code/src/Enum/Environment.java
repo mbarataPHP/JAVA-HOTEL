@@ -11,5 +11,6 @@ package Enum;
 public enum Environment {
 	PROD,
 	DEV,
-	ALL
+	ALL,
+	TEST
 }

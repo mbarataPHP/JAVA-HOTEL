@@ -2,6 +2,7 @@ package Metier;
 import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -17,6 +18,24 @@ import java.time.format.FormatStyle;
  *
  */
 public class DateMetier {
+	
+	/**
+	 * Cette méthode permet de créer une date
+	 * @param dateString
+	 * @return
+	 */
+	public static Date initDate(String dateString){
+		SimpleDateFormat dateformat2 = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			return dateformat2.parse(dateString);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
 	
 	/**
 	 * Cette méthode permet d'initialiser LocalDate

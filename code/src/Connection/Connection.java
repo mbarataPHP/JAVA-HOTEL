@@ -51,9 +51,8 @@ public class Connection {
 		
 		ArrayList<Class<?>> models = Scan.getClassesForPackage("Model");
 		
-		Log log = (Log) this.fb.get("log");
-		log.setLog("logModel", "les type de models: ", Environment.DEV);
-		log.setLog("logModel", "", Environment.DEV);
+		
+
 		for(java.lang.Class model : models) {
 		
 			
@@ -63,7 +62,7 @@ public class Connection {
 				unModel.initModel(this.fb);
 				this.models.put(model.getName(), unModel);
 				
-				log.setLog("logModel", model.getName(), Environment.DEV);
+
 				  
 				
 			} catch (InstantiationException |  IllegalAccessException e) {
@@ -79,7 +78,6 @@ public class Connection {
 			}
 		}
 	
-		log.getLog("logModel").close();
 	}
 	
 	

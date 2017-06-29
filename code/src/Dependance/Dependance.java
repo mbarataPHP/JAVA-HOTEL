@@ -20,20 +20,42 @@ public class Dependance {
 	private Log log;
 	private View view;
 	private Session session;
+	
+	public Dependance(Environment env){
+		this.env = env;
+		
+		if(Environment.TEST!=env){
+			this.log = new Log(this);
+		}
+		
+		
+		this.init();
+		Dependance.dependanceKernel = this;
+	}
+	
+	
 	public Dependance(Stage stage, Environment env){
 		this.env = env;
-		this.log = new Log(this);
+		
+		if(Environment.TEST!=env){
+			this.log = new Log(this);
+		}
+		
 		this.stage = stage;
 		
 		this.init();
 		Dependance.dependanceKernel = this;
 	}
 	
+	
 	private void init(){
 		if(this.connection==null){
 			this.connection = new Connection(this);
-			this.route = new Route(this);
-			this.view = new View(this);
+			
+			if(Environment.TEST!=this.env){
+				this.route = new Route(this);
+				this.view = new View(this);
+			}
 			this.session = new Session(this);
 		}
 	}
