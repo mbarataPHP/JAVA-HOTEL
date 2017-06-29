@@ -133,7 +133,7 @@ public class UserDirecteurHotelCtrl extends Parent.Ctrl{
                                                 alert.setGraphic(null);
                                                 alert.setTitle("Suppression");
                                                 alert.setHeaderText("Confirmation de la suppression");
-                                                alert.setContentText("Etes vous sur de supprimer "+Utilisateur.getMailLastNameFirstName()+"?");
+                                                alert.setContentText("Etes-vous sur de supprimer "+Utilisateur.getMailLastNameFirstName()+"?");
                                                 
                                                 ButtonType buttonOK = new ButtonType("OK");
                                                 ButtonType buttonFERMER = new ButtonType("Fermer", ButtonData.CANCEL_CLOSE);

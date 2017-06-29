@@ -134,7 +134,7 @@ public class ReservationCtrl extends Parent.Ctrl{
 	 * @return TableColumn
 	 */
 	private TableColumn getDurerColumn(){
-		 TableColumn actionFacture = new TableColumn( "durer de la réservation (en jour)" );
+		 TableColumn actionFacture = new TableColumn( "Durée de la réservation (en jour)" );
 		 actionFacture.setCellValueFactory( new PropertyValueFactory<>( "MODIF" ) );
 	        Callback<TableColumn<Facture, String>, TableCell<Facture, String>> cellFactoryDateFin =
 	                new Callback<TableColumn<Facture, String>, TableCell<Facture, String>>()
@@ -177,7 +177,7 @@ public class ReservationCtrl extends Parent.Ctrl{
 	 * @return TableColumn
 	 */
 	private TableColumn getClientColumn(){
-		 TableColumn actionFacture = new TableColumn( "reserver par:" );
+		 TableColumn actionFacture = new TableColumn( "Reservé par:" );
 		 actionFacture.setCellValueFactory( new PropertyValueFactory<>( "MODIF" ) );
 	        Callback<TableColumn<Facture, String>, TableCell<Facture, String>> cellFactoryDateFin =
 	                new Callback<TableColumn<Facture, String>, TableCell<Facture, String>>()

@@ -21,9 +21,9 @@ INSERT INTO `role` (`id`, `type_role`) VALUES
 (7, 'Spa manager');
 
 INSERT INTO menu(id, nom_menu, prix) VALUES
-(1, 'menu 1', 12.65),
-(3, 'menu 2', 10.37),
-(2, 'menu 3', 32.83);
+(1, 'Dos de cabillaux rôti et touillon de légume au pesto', 67.65),
+(3, 'Entrecôte Black Argus 200g, frites maison et béanaise, salade verte', 10.37),
+(2, 'Les Grillades du pays et le foie gras poele oeuf poché et jus au vin de bergerac', 32.83);
 
 
 -- password = 123456
@@ -33,7 +33,7 @@ INSERT INTO `utilisateur` (`id`, `lastname`, login, `mail`, `firstname`, `passwo
 (3, 'Konovalova', 'ata-Konovalova', 'ata@Konovalova.ru', 'ata', '123456', 4),
 (4, 'cartman', 'eric-cartman', 'eric@cartman.fr', 'eric', '123456', 2),
 (5, 'Zoidberg ', 'john-zoidberg', 'john@zoidberg.fr', 'John', '123456', 5),
-(6, 'Rodríguez ', 'bender-rodríguez', 'bender@rodriguez.fr', 'Bender', '123456', 6),
+(6, 'Rodríguez ', 'bender-rodriguez', 'bender@rodriguez.fr', 'Bender', '123456', 6),
 (7, 'marsh', 'randy-marsh', 'randy@marsh.com', 'randy', '123456', 7);
 
 INSERT INTO client(id, lastname, firstname, mail) VALUES

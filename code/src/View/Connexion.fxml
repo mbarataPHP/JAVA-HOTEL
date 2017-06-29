@@ -28,7 +28,7 @@
               <Label layoutX="66.0" layoutY="101.0" text="login:" />
       	    
       	     <Label layoutX="29.0" layoutY="144.0" text="mot de passe:" />
-            <Label id="titreConnection" layoutX="206.0" layoutY="23.0" prefHeight="48.0" prefWidth="100.0" style="-fx-font-size: 18;" stylesheets="/css/connexion.css" text="Connetion">
+            <Label id="titreConnection" layoutX="206.0" layoutY="23.0" prefHeight="48.0" prefWidth="100.0" style="-fx-font-size: 18;" stylesheets="/css/connexion.css" text="Connexion">
                <effect>
                   <Blend mode="BLUE" />
                </effect>

@@ -16,7 +16,7 @@
       <Pane layoutX="669.0" layoutY="242.0" prefHeight="452.0" prefWidth="314.0" style="-fx-border-color: #AAAAAA; -fx-background-color: #EFEFEF;">
          <children>
             <TextField fx:id="text" layoutX="14.0" layoutY="139.0" prefHeight="33.0" prefWidth="284.0" />
-            <Label layoutX="67.0" layoutY="72.0" text="Type de role">
+            <Label layoutX="67.0" layoutY="72.0" text="Type de rôle">
                <font>
                   <Font size="34.0" />
                </font>

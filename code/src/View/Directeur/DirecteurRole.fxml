@@ -17,7 +17,7 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Label layoutX="695.0" layoutY="151.0" prefHeight="47.0" prefWidth="199.0" text="Les roles" textFill="#1b1b1b">
+      <Label layoutX="470.0" layoutY="151.0" prefHeight="47.0" prefWidth="199.0"  text="Les rôles" textFill="#1b1b1b">
          <font>
             <Font size="18" />
          </font>
