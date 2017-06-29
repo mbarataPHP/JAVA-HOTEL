@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 
 <AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
@@ -10,8 +9,8 @@
     		<fx:include source="../Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
 	<children>
-		<Button layoutX="271.0" layoutY="298.0" mnemonicParsing="false" onAction="#redirection" prefHeight="48.0" prefWidth="107.0" text="Dashboard" userData="dashboard" />
-		<Button layoutX="460.0" layoutY="298.0" mnemonicParsing="false" onAction="#redirection" prefHeight="48.0" prefWidth="107.0" text="Gestion des rôles" userData="role" />
-		<Button layoutX="643.0" layoutY="298.0" mnemonicParsing="false" onAction="#redirection" prefHeight="48.0" prefWidth="134.0" text="Gestion des utilisateur" userData="user" />
+		<Button layoutX="379.0" layoutY="298.0" mnemonicParsing="false" onAction="#redirection" prefHeight="48.0" prefWidth="107.0" text="Dashboard" userData="dashboard" />
+		<Button layoutX="568.0" layoutY="298.0" mnemonicParsing="false" onAction="#redirection" prefHeight="48.0" prefWidth="107.0" text="Gestion des rôles" userData="role" />
+		<Button layoutX="751.0" layoutY="298.0" mnemonicParsing="false" onAction="#redirection" prefHeight="48.0" prefWidth="134.0" text="Gestion des utilisateur" userData="user" />
 	</children>
 </AnchorPane>

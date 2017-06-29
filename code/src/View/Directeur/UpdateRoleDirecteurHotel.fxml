@@ -13,7 +13,7 @@
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
     </children>
    <children>
-      <Pane layoutX="437.0" layoutY="242.0" prefHeight="452.0" prefWidth="314.0" style="-fx-border-color: #AAAAAA; -fx-background-color: #EFEFEF;">
+      <Pane layoutX="669.0" layoutY="242.0" prefHeight="452.0" prefWidth="314.0" style="-fx-border-color: #AAAAAA; -fx-background-color: #EFEFEF;">
          <children>
             <TextField fx:id="text" layoutX="14.0" layoutY="139.0" prefHeight="33.0" prefWidth="284.0" />
             <Label layoutX="67.0" layoutY="72.0" text="Type de role">
@@ -29,7 +29,7 @@
             <Label fx:id="erreur" layoutX="142.0" layoutY="218.0" text="" textFill="RED" />
          </children>
       </Pane>
-      <Label layoutX="470.0" layoutY="151.0" text="Modification des rôles  ">
+      <Label layoutX="708.0" layoutY="151.0" text="Modification des rôles  ">
          <font>
             <Font size="24.0" />
          </font>

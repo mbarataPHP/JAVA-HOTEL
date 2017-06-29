@@ -12,12 +12,12 @@
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
     </children>
    <children>
-      <TableView fx:id="TVRole" layoutX="247.0" layoutY="376.0" prefHeight="200.0" prefWidth="752.0" />
-      <Button layoutX="873.0" layoutY="290.0" mnemonicParsing="false" onAction="#create" prefHeight="30.0" prefWidth="126.0" style="-fx-text-fill: #F4A11E; -fx-background-color: #212934;" text="Création">
+      <TableView fx:id="TVRole" layoutX="373.0" layoutY="376.0" prefHeight="200.0" prefWidth="752.0" />
+      <Button layoutX="985.0" layoutY="303.0" mnemonicParsing="false" onAction="#create" prefHeight="30.0" prefWidth="126.0" style="-fx-text-fill: #F4A11E; -fx-background-color: #212934;" text="Création">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Label layoutX="470.0" layoutY="151.0" prefHeight="47.0" prefWidth="199.0"  text="Les roles" textFill="#1b1b1b">
+      <Label layoutX="695.0" layoutY="151.0" prefHeight="47.0" prefWidth="199.0" text="Les roles" textFill="#1b1b1b">
          <font>
             <Font size="18" />
          </font>
