@@ -13,7 +13,7 @@
 	<ImageView fitHeight="48.0" fitWidth="187.0" layoutX="17.0" layoutY="24.0">
 		<Image url="/img/logo.png" />
 	</ImageView>
-   <Pane layoutY="152.0" prefHeight="647.0" prefWidth="213.0" style="-fx-background-color: #212934;">
+   <Pane layoutY="152.0" prefHeight="651.0" prefWidth="213.0" style="-fx-background-color: #212934;">
       <children>
          <Label layoutX="95.0" layoutY="15.0" prefHeight="31.0" prefWidth="94.0" style="-fx-text-fill: #F4A11E;" text="Menu">
             <font>
