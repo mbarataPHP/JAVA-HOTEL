@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Label?>
 
 <AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
    	<children>
@@ -10,6 +12,10 @@
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
    <children>
+	   <Label layoutX="470.0" layoutY="151.0" prefHeight="27.0" prefWidth="201.0" text="Disponibiliter des chambres">
+	   <font>
+		   <Font size="18.0" />
+	   </font></Label>
       <TableView fx:id="chambres" layoutX="410.0" layoutY="304.0" prefHeight="200.0" prefWidth="493.0" />
    </children>
 </AnchorPane>
