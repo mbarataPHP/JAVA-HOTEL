@@ -14,7 +14,7 @@
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
    <children>
-      <AnchorPane layoutX="212.0" layoutY="122.0" prefHeight="200.0" prefWidth="577.0" style="-fx-background-color: #DDD; -fx-border-color: #EEE;">
+      <AnchorPane layoutX="352.0" layoutY="200.0" prefHeight="200.0" prefWidth="577.0" style="-fx-background-color: #DDD; -fx-border-color: #EEE;">
          <children>
             <AnchorPane layoutX="69.0" layoutY="26.0" prefHeight="31.0" prefWidth="425.0">
                <children>
@@ -30,7 +30,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="212.0" layoutY="337.0" prefHeight="200.0" prefWidth="577.0" style="-fx-background-color: #DDD; -fx-border-color: #EEE;">
+      <AnchorPane layoutX="352.0" layoutY="432.0" prefHeight="200.0" prefWidth="577.0" style="-fx-background-color: #DDD; -fx-border-color: #EEE;">
          <children>
             <AnchorPane layoutX="81.0" layoutY="14.0" prefHeight="57.0" prefWidth="407.0">
                <children>
@@ -46,11 +46,11 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Button layoutX="455.0" layoutY="559.0" mnemonicParsing="false" onAction="#create" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Modifier">
+      <Button layoutX="594.0" layoutY="687.0" mnemonicParsing="false" onAction="#create" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Modifier">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Label layoutX="376.0" layoutY="74.0" text="Modification d'une réservation ">
+      <Label layoutX="470.0" layoutY="151.0" text="Modification d'une réservation ">
          <font>
             <Font size="18.0" />
          </font>
