@@ -13,14 +13,14 @@
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
    <children>
-         <Button layoutX="700.0" layoutY="194.0" mnemonicParsing="false" onAction="#ajoutReservation" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Ajouter une réservation">
+         <Button layoutX="775.0" layoutY="221.0" mnemonicParsing="false" onAction="#ajoutReservation" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Ajouter une réservation">
          <font>
             <Font size="18.0" />
          </font></Button>
-   		<TableView fx:id="factures" layoutX="253.0" layoutY="260.0" prefHeight="445.0" prefWidth="809.0">
+   		<TableView fx:id="factures" layoutX="185.0" layoutY="260.0" prefHeight="445.0" prefWidth="809.0">
 		
 		</TableView>
-      <Label layoutX="376.0" layoutY="129.0" text="Dashboard du chef de reception ">
+      <Label layoutX="470.0" layoutY="151.0" text="Dashboard du chef de reception ">
          <font>
             <Font size="18.0" />
          </font>
