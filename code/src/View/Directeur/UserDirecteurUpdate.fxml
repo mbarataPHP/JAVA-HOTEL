@@ -16,7 +16,7 @@
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
 	<children>
-		<Label layoutX="470.0" layoutY="145.0" text="Modification Utilisateur" GridPane.columnIndex="0" GridPane.rowIndex="1">
+		<Label layoutX="470.0" layoutY="151.0" text="Modification Utilisateur" GridPane.columnIndex="0" GridPane.rowIndex="1">
          <font>
             <Font size="24.0" />
          </font></Label>

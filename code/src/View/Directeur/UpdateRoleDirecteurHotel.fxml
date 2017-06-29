@@ -30,7 +30,7 @@
             <Label fx:id="erreur" layoutX="142.0" layoutY="218.0" text="" textFill="RED" />
          </children>
       </Pane>
-      <Label layoutX="470.0" layoutY="145.0" text="Modification des rôles  ">
+      <Label <Label layoutX="470.0" layoutY="151.0" text="Modification des rôles  ">
          <font>
             <Font size="24.0" />
          </font>
