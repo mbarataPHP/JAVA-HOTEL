@@ -21,7 +21,7 @@
             </font>
          </Label>
           <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="32.0" layoutY="9.0">
-              <Image url="@MenuBar.png" />
+              <Image url="/img/MenuBar.png" />
           </ImageView>
       
       		 <Button layoutY="69.0" mnemonicParsing="false" onAction="#accueil" prefHeight="51.0" prefWidth="213.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E; -fx-border-color: black;" text="Accueil">

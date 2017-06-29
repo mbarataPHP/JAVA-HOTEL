@@ -8,8 +8,12 @@
 	<children>
     		<fx:include source="../Include/Menubar.fxml" /> <!-- Inclut la barre du haut -->
     		<fx:include source="../Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
+<<<<<<< HEAD
 
         <Pane layoutX="227.0" layoutY="275.0" prefHeight="227.0" prefWidth="715.0" style="-fx-background-color: F7F9F9;" />
+=======
+      <Pane layoutX="227.0" layoutY="275.0" prefHeight="227.0" prefWidth="715.0" style="-fx-background-color: F7F9F9;" />
+>>>>>>> 3ab45cebb846aa38b4fd2989915c8b64a3c54930
       <Pane layoutX="213.0" layoutY="758.0" prefHeight="45.0" prefWidth="787.0" style="-fx-background-color: #212934;" />
 	</children>
    <opaqueInsets>

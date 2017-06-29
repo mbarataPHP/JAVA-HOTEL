@@ -7,18 +7,27 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <AnchorPane id="AnchorPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="366.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
 
     <Pane layoutX="213.0" layoutY="758.0" prefHeight="45.0" prefWidth="787.0" style="-fx-background-color: #212934;">
+=======
+<AnchorPane id="AnchorPane" layoutX="100.0" layoutY="601.0" maxHeight="Infinity" maxWidth="Infinity" prefHeight="60.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+      
+    <Pane prefHeight="200.0" prefWidth="700.0" style="-fx-background-color: #212934;">
+>>>>>>> 3ab45cebb846aa38b4fd2989915c8b64a3c54930
       <children>
-          <ImageView fitHeight="45.0" fitWidth="39.0" layoutX="338.0">
+          <ImageView fitHeight="45.0" fitWidth="39.0" layoutX="321.0" layoutY="109.0">
               <Image url="/img/Copyright.png" />
           </ImageView>
+<<<<<<< HEAD
           <Label layoutX="381.0" layoutY="9.0" text="opyright " textFill="WHITE">
+=======
+          <Label layoutX="389.0" layoutY="118.0" text="opyright " textFill="WHITE">
+>>>>>>> 3ab45cebb846aa38b4fd2989915c8b64a3c54930
               <font>
                   <Font size="18.0" />
               </font>
           </Label>
       </children></Pane>
-		
 </AnchorPane>
