@@ -12,11 +12,11 @@
     		<fx:include source="/View/Include/Leftbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
 	<children>
-		<Button layoutX="272.0" layoutY="375.0" mnemonicParsing="false" onAction="#createClient" prefHeight="51.0" prefWidth="306.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Ajouter un nouveau client">
+		<Button layoutX="490.0" layoutY="375.0" mnemonicParsing="false" onAction="#createClient" prefHeight="51.0" prefWidth="306.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Ajouter un nouveau client">
          <font>
             <Font size="24.0" />
          </font></Button>
-      	<Button layoutX="661.0" layoutY="375.0" mnemonicParsing="false" onAction="#reservation" prefHeight="51.0" prefWidth="306.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Voir les réservations">
+      	<Button layoutX="858.0" layoutY="375.0" mnemonicParsing="false" onAction="#reservation" prefHeight="51.0" prefWidth="306.0" style="-fx-background-color: #212934; -fx-text-fill: #F4A11E;" text="Voir les réservations">
          <font>
             <Font size="24.0" />
          </font></Button>
