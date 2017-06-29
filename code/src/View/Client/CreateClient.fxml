@@ -14,12 +14,13 @@
     		<fx:include source="/View/Include/Footerbar.fxml" /> <!-- Inclut la barre du haut -->
 	</children>
    <children>
+      <Label layoutX="470.0" layoutY="151.0" prefHeight="47.0" prefWidth="199.0" text="Création d'un client">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
       <Pane layoutX="396.0" layoutY="266.0" prefHeight="466.0" prefWidth="428.0" style="-fx-border-color: #EEE; -fx-background-color: #DDD;">
          <children>
-             <Label layoutX="470.0" layoutY="151.0" prefHeight="27.0" prefWidth="201.0" text="Création d'un client">
-             <font>
-                 <Font size="18.0" />
-             </font></Label>
+
             <Pane layoutX="18.0" layoutY="47.0" prefHeight="84.0" prefWidth="393.0">
                <children>
                   <TextField fx:id="lastname" layoutX="190.0" layoutY="30.0" />
