@@ -28,12 +28,12 @@ INSERT INTO menu(id, nom_menu, prix) VALUES
 
 -- password = 123456
 INSERT INTO `utilisateur` (`id`, `lastname`, login, `mail`, `firstname`, `password`, `id_role`) VALUES
-(1, 'St-Pierre', 'jst-pierre', 'JeanSt-Pierre@jourrapide.com', 'Jean', '123456', 1),
-(2, 'St-paul', 'jst-paul', 'JeanSt-Pierre@paul.com', 'Jean', '123456', 3),
+(1, 'St-Pierre', 'jst-pierre', 'JeanSt-Pierre@jourrapide.fr', 'Jean', '123456', 1),
+(2, 'St-paul', 'jst-paul', 'JeanSt-Pierre@paul.fr', 'Jean', '123456', 3),
 (3, 'Konovalova', 'ata-Konovalova', 'ata@Konovalova.ru', 'ata', '123456', 4),
-(4, 'cartman', 'eric-cartman', 'eric@cartman.com', 'eric', '123456', 2),
-(5, 'Zoidberg ', 'john-zoidberg', 'john@zoidberg.com', 'John', '123456', 5),
-(6, 'Rodríguez ', 'bender-rodríguez', 'bender@rodríguez.com', 'Bender', '123456', 6),
+(4, 'cartman', 'eric-cartman', 'eric@cartman.fr', 'eric', '123456', 2),
+(5, 'Zoidberg ', 'john-zoidberg', 'john@zoidberg.fr', 'John', '123456', 5),
+(6, 'Rodríguez ', 'bender-rodríguez', 'bender@rodriguez.fr', 'Bender', '123456', 6),
 (7, 'marsh', 'randy-marsh', 'randy@marsh.com', 'randy', '123456', 7);
 
 INSERT INTO client(id, lastname, firstname, mail) VALUES

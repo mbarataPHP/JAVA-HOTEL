@@ -92,7 +92,7 @@ public class DirecteurRoleCtrl  extends Parent.Ctrl {
         
         
       //SUPRESSION
-        TableColumn actionSupp = new TableColumn( "modifier" );
+        TableColumn actionSupp = new TableColumn( "suppression" );
         actionSupp.setCellValueFactory( new PropertyValueFactory<>( "MODIF" ) );
         Callback<TableColumn<Role, String>, TableCell<Role, String>> cellFactorySupp =
                 new Callback<TableColumn<Role, String>, TableCell<Role, String>>()
