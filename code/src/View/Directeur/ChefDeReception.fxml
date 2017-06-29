@@ -17,7 +17,7 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-   		<TableView fx:id="factures" layoutX="102.0" layoutY="260.0" prefHeight="445.0" prefWidth="809.0">
+   		<TableView fx:id="factures" layoutX="253.0" layoutY="260.0" prefHeight="445.0" prefWidth="809.0">
 		
 		</TableView>
       <Label layoutX="376.0" layoutY="129.0" text="Dashboard du chef de reception ">
